@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Infos Site -->
+    <title>Physio Vet’Ostéo du Léman - Tarifs</title>
+    <link rel="icon" type="image/svg" href="../images/logo.svg">
+    <meta name="description" content="Cabinet vétérinaire consacré à la physiothérapie à Marin, Haute-Savoie. Tous nos tarifs incluent la TVA en vigueur.">
+    
+    <!-- Robots -->
+    <meta name="robots" content="all">
+
+    <!-- OG -->
+    <meta property='og:title' content="Physio Vet’Ostéo du Léman - Tarifs des soins">
+    <meta property='og:image' content="https://physiovetoduleman.com/images/logo.png">
+    <meta property='og:description' content="Cabinet vétérinaire consacré à la physiothérapie à Marin, Haute-Savoie. Tous nos tarifs incluent la TVA en vigueur.">
+    <meta property='og:url' content="https://physiovetoduleman.com/pages/tarifs.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" id='style' href="../css/style.css?v=16">
+
+
+    <!-- SCRIPTS -->
+    <script src="https://kit.fontawesome.com/4d8f658478.js" crossorigin="anonymous" defer></script>
+    <script  type="text/javascript" src="../utilitaires/jquery-3.6.0.min.js"></script>   
+
+ 
+    
+    <!-- ANALYTICS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206863621-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-206863621-1');
+    </script>
+    
+</head>
+
+<body id="tarifs">
+    <header>
+        <div class='nav'>
+            
+        </div>
+        <h1>Nos Tarifs*</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Prestations de Physio Vet’Ostéo du Léman</h2>
+            <div class="grille-tarifs"></div>
+       
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $('.nav').load('../imports/navigation.html');
+            $('footer').load('../imports/footer.html');
+            $('.grille-tarifs').load('../imports/grille-tarifs.html');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+/*---------------------------------- */
+/* STYLES GENERAUX ----------------- */
+/*---------------------------------- */
+
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --font-txt: Arial;
+    --font-title: Montserrat;
+
+    --clr-bleu-xf:#424656;
+    --clr-bleu-marine:#001B46;
+    --clr-bleu-f:#374d7f;
+    --clr-bleu-m:#4a5d91;
+    --clr-bleu-c:#5c6ea4;
+    --clr-bleu-xc:#E7EFFF;
+    --clr-bleu-xxc:#F5F9FF;
+    --clr-teal-f:#61A2A5;
+    --clr-teal-c:#8CBFBE;
+
+    --clr-txt:var(--clr-bleu-marine);
+    --clr-accent: var(--clr-teal-c);
+    --clr-title:var(--clr-bleu-marine);
+
+    --hauteur-header:4.5rem;
+    --border:5px var(--clr-bleu-xc) solid;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/titilliumweb/v10/NaPDcZTIAOhVxoMyOr9n_E7ffEDBGItzYw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v18/JTUQjIg1_i6t8kCHKm459WxRyS7m.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body{
+    position: relative;
+    padding:0;
+    margin:0;
+
+    font-family: var(--font-txt);
+    font-size: 1.25em;
+    color:var(--clr-txt);
+
+    background: var(--clr-bleu-xxc);
+    /* background: linear-gradient(-15deg,var(--clr-bleu-m) 20vh,var(--clr-bleu-xc) ,var(--clr-bleu-m)); */
+}
+
+body::-webkit-scrollbar{
+    width:0;
+}
+
+a{
+    color:unset;
+    text-decoration: none;
+}
+
+.anchor{
+    scroll-margin-top:var(--hauteur-header);
+}
+
+bdo > b {
+    font-size: 0.8em;
+}
+
+p{
+    /* text-indent: 2ch; */
+    justify-content: stretch;
+    line-height: 1.25;
+}
+
+h3 ~*{
+    padding:0;
+}
+
+/* IMAGES ----------------------- */
+.texte-photo >*{
+    text-align: center;
+}
+.texte-photo img{
+    /* border:var(--border); */
+    filter:drop-shadow(5px 5px 5px  var(--clr-bleu-xf));
+    padding:5px;
+    max-height: 400px;
+    max-width: 80%;
+}
+.tp_texte{
+    text-align: left;
+}
+.placeholder{
+    position: relative;
+    opacity: .75;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ICONES --------------------- */
+.icon{
+    position:relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -.075em;
+    margin: .5em;
+}
+.icon>span{
+    position:absolute;
+    display: none;
+}
+.icon:hover>span{
+    display: block;
+}
+
+/* ACCENTUATIONS -------------- */
+h1,h2,h3,h4{
+    font-family: var(--font-title);
+}
+h2,h3,h4{    
+    text-decoration: underline var(--clr-teal-c);
+}
+h2{
+    text-decoration-thickness: .15em;
+    text-decoration-skip-ink:none;
+    filter: drop-shadow(0 1px 0px var(--clr-title));
+}
+.accent{
+    color:var(--clr-accent);
+    font-weight: bold;
+}
+.shadow-dark,
+header h1{
+    filter:drop-shadow(0 0 2px var(--clr-bleu-marine));
+}
+.shadow-light{
+    filter:drop-shadow(0 0 1px var(--clr-bleu-xxc));
+}
+
+/* DETAILS --------------------- */
+details:hover{
+    cursor: pointer;
+}
+details summary,
+section a, #mail{
+    text-decoration: underline dotted var(--clr-bleu-c);
+}
+details[open] summary{
+    text-decoration: none;
+}
+
+/* LISTES ------------------- */
+.no-dot{
+    list-style-type: none;
+}
+
+footer ul,
+header ul{
+    list-style-type: none;
+    padding: 0; margin:0;
+}
+
+.liste-coordo{
+    list-style-type: none;
+    text-align: center;
+    padding:0;
+}
+
+.liste-coordo li:first-child{
+    font-weight: bold;
+}
+
+/* TABLES ------------------- */
+table td+td{
+    text-align: end;
+    min-width: 5em;
+    padding-left: 2em;
+}
+
+/*---------------------------------- */
+/* HEADER -------------------------- */
+header{
+    position:relative;
+    padding-top:calc(1.5*var(--hauteur-header));
+    
+    height: 50vh; 
+    text-align: center;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-color: var(--clr-teal-c);
+
+    background-repeat:no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+header >*{
+    margin: auto;
+    hyphens: manual;
+    color:var(--clr-bleu-xxc);
+}
+header h1{
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1em;
+    font-size: 3em;
+}
+header p{
+    font-size: 1.75em;
+}
+
+
+/* ACCUEIL ----------------------- */
+#accueil header{
+    min-height: 100vh;
+    height: fit-content;
+}
+/* Bouton ------------ */
+.hero-cta{
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: .25em;
+    background: rgba(255,255,255,.25);
+    border:1px solid var(--clr-bleu-xc);
+    height: fit-content;
+}
+.hero-cta:hover{
+    filter: brightness(110%) drop-shadow(0 0 5px var(--clr-bleu-f));
+}
+/* Défilement --- */    
+.hover-defilement{
+    display: none;
+}
+
+/* BANNIERES --------------------- */
+#accueil header{
+    background-image:  url(../images/banner-min.jpg);
+    background-position: top center;
+}
+#physio header{
+    background-image:  url(../images/xenaphysio-min.jpg);
+    background-position: center ;
+}
+#contact header{
+    background-image:  url(../images/vitrine-min.jpg);
+    background-position: center;
+}
+#tarifs header,
+#cgu header,
+#mentions-legales header{
+    background-image:  url(../images/tarifs-min.jpg);
+    background-position: bottom;
+}
+
+
+/*---------------------------------- */
+/* SECTIONS------------------------- */
+section{
+    padding:1em;
+    position: relative;
+    margin:var(--hauteur-header) auto calc(2*var(--hauteur-header));
+    width: clamp(310px,80%,1100px);
+}
+
+/* Separateur vague */
+section:nth-of-type(n+2)::before{
+    content:'';
+    
+    position: absolute;
+    top:calc(-1*var(--hauteur-header));
+    left:0;
+
+    width: 100%;
+    height:calc(0.5*var(--hauteur-header));
+
+    background: center no-repeat url(../images/vague.svg);
+    background-size: contain;
+}
+/*---------------------------------- */
+/* PAGES --------------------------- */
+
+
+/* ACCUEIL ------------------------- */
+/* EQUIPEMENTS---------------------- */
+.equipements-liste{
+    display: flex;
+    flex-direction: column;
+}
+.equipements-liste >*{
+    padding: .5em 0;
+    height: 100%;
+}
+.equipement-wrapper{
+    border:var(--border);
+}
+.equipement-description table{
+    width: 100%;
+    padding: .5em;
+}
+
+.equipement-img{
+    text-align:center;
+}
+.equipements img{
+    max-height:250px;
+    width: auto;
+}
+
+
+/* PHYSIO ----------------------- */
+.soins-liste summary{
+    font-size: 1.15em;
+}
+
+/* CONTACT -----------------------*/
+.contact section > *:nth-child(2){
+    padding:0;
+}
+.reversed{
+    unicode-bidi:bidi-override;
+    direction: rtl;
+    white-space: nowrap;
+}
+.contact-map{
+    height: 40vh;
+    margin: auto;
+}
+.contact-map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.formulaire-contact{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1,minmax(200px,500px));
+    grid-auto-rows: minmax(2rem,auto);
+}
+.item-d{
+    grid-row: span 5;
+}
+
+
+/*---------------------------------- */
+/* MEDIA QUERIES ------------------- */
+/*---------------------------------- */
+@media (max-width:1024px){
+    li+li{
+        margin-top:.5em;
+    }
+}
+
+@media (min-width:1025px){  
+
+/* STYLES GENERAUX ----------------- */   
+    .texte-photo{
+        display: flex;
+    }
+    *:nth-of-type(even) .texte-photo{
+        flex-direction: row-reverse;
+    }
+    .texte-photo >*{
+        position: relative;
+        min-width: 50%;
+        padding:1.5em;
+    }
+    .texte-photo img{
+        max-height: 500px;
+        max-width: 100%;
+        width: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    h3 ~ *:not(h3){
+        padding-left:2em;
+    }
+
+    .col_l{
+        display:flex;
+        justify-content: space-between;
+    }
+    .physio-faq{
+        width: 110%;
+        margin-left:2em;
+        padding: 5px;
+        height: fit-content;
+        line-height: 1.5;
+        border:1px var(--clr-bleu-c) solid;
+    }
+
+/*---------------------------------- */
+/* HEADER -------------------------- */
+    header{
+        padding-top:calc(2.5*var(--hauteur-header));
+        background-attachment: fixed;
+    }
+    #accueil header{
+        background-image:  url(../images/banner-med.jpg);
+    }
+    #physio header{
+        background-image: url(../images/xenaphysio-med.jpg);
+        position: bottom;
+    }
+    #tarifs header, 
+    #cgu header, 
+    #mentions-legales header{
+        background-image:  url(../images/tarifs-med.jpg);
+    }
+    #contact header{
+        background-image:  url(../images/vitrine-med.jpg);
+    }
+    header h1{
+        font-size: 4em;
+    }
+
+/* Défilement vers le bas ------- */
+    .hover-defilement{
+        display:block;
+        position:absolute;
+        bottom: 0;left:0;
+        min-width: 100%;
+        max-height: 5em;
+        filter: opacity(.55);
+        transition: all .5s ease-in-out;
+    }
+    .hover-defilement i{
+        color: var(--clr-bleu-marine);
+        font-size: 5em;
+        transform:scaleX(2);
+    }
+    .hover-defilement:hover{
+        filter: opacity(.85);
+    }
+    .hover-defilement:hover::after{
+        content:'';
+        position: absolute;
+        bottom: 0;left:0;
+        width: 100%;height: 5em;
+        background: var(--clr-bleu-xxc);
+        filter: opacity(.55) blur(2px);
+        z-index: -1;
+        transition: all .5s ease-in-out;
+    }
+
+/*---------------------------------- */
+/* EQUIPEMENTS --------------------- */
+
+    /* Conteneurs */
+    .equipements-wrapper{  
+        position: relative;  
+        width: 100%;
+        height: 50ch;
+        border:var(--border);
+    }
+    .equipements-liste{
+        width: 50%;
+        height:50%;
+        border-bottom: var(--border);
+    }
+
+    .equipements-liste{
+        z-index: 1;
+    }
+
+    .equipements-liste details[open] {
+        background:var(--clr-bleu-xc);
+    }
+    .equipements-liste details[open] summary{
+        font-weight: bold;
+    }
+
+    /* Contenu */
+    .equipement-wrapper{
+        border:none;
+        position: absolute;
+        z-index: -1;
+        top:0;left:0;
+        width: 100%;
+        height: 100%;
+    }
+    .equipement-img {
+        position:absolute;
+        top:0;
+        left:50%;
+        width: 50%;
+        height: 100%;
+        padding: .5em;
+        text-align: center;
+        border-left: var(--border);
+    }
+    .equipement-img img{
+        width: 100%; height: auto;
+        max-height: 100%; width: auto;
+    }
+    .equipement-description{
+        position:absolute;
+        top:50%;
+        left:0;
+        width: 50%;
+        height: 50%;
+    }
+    .equipement-lien{
+        display:none;
+    }
+}
+
+@media (min-width:1280px){
+    #accueil header{
+        background-image:  url(../images/banner-big.jpg);
+    }
+}
