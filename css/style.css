@@ -237,6 +237,7 @@ header p{
     display: flex;
     justify-content: space-around;
     margin: auto;
+
 }
 /* Bouton ------------ */
 .hero-cta{
@@ -248,9 +249,10 @@ header p{
     background: rgba(255,255,255,.25);
     border:1px solid var(--clr-bleu-xc);
     height: fit-content;
+    margin: 0 clamp(5px, 1vw, 10px);
 }
 .hero-cta:hover{
-    filter: brightness(110%) drop-shadow(0 0 5px var(--clr-bleu-f));
+    filter: brightness(140%) drop-shadow(0 0 10px var(--clr-bleu-f));
 }
 /* Défilement --- */    
 .hover-defilement{
