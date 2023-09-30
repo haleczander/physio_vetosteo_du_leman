@@ -233,6 +233,11 @@ header p{
     min-height: 100vh;
     height: fit-content;
 }
+.hero-actions{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
 /* Bouton ------------ */
 .hero-cta{
     text-transform: uppercase;
