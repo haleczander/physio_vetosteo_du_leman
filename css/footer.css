@@ -1,6 +1,5 @@
 /* FOOTER */
 footer{
-    z-index: 0;
     height:fit-content;
     position: relative;
     justify-content: center;
@@ -14,7 +13,11 @@ footer{
 
 footer .logo{
     height: 20vh;
-    margin-top: 2em;
+    margin: 2em auto;
+}
+
+footer .rights {    
+    font-size: .85em;
 }
 
 
@@ -36,8 +39,7 @@ footer .logo{
         text-indent: 2ch;
     }
 
-    .rights{
+    footer .rights{
     grid-column: span 4;
-    font-size: .85em;
     }
 }
