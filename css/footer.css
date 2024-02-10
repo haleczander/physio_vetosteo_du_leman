@@ -1,7 +1,6 @@
 /* FOOTER */
 footer{
     z-index: 0;
-    padding: 3rem 10% 1rem 10%;
     height:fit-content;
     position: relative;
     justify-content: center;
@@ -11,32 +10,19 @@ footer{
     display:grid;
     grid-template-columns: repeat(1,1fr);
     text-align: center;
-    gap:2em;
 }
-
-footer > ul{
-    display: grid;
-    gap: 2em;
-    line-height: 1.5em;
-}
-
 
 footer .logo{
     height: 20vh;
+    margin-top: 2em;
 }
 
-footer ul li b{
-    font-size: 1.15em;
-    white-space: nowrap;
-}
-.rights{
-    max-width: 80vw;
-}
 
 @media  (min-width:1025px){
-/* footer */
     footer{
-        grid-template-columns: repeat(auto,1fr);
+        grid-template-columns: repeat(auto,3fr);    
+        padding: 3rem 10% 1rem;
+        gap: 2em;
     }
 
     footer .logo{
@@ -45,10 +31,11 @@ footer ul li b{
         margin-left: 0;
     }
 
-    footer>ul{
-        grid-template-columns: repeat(3,1fr);
+    .footer-section > ul{
         text-align: left;
+        text-indent: 2ch;
     }
+
     .rights{
     grid-column: span 4;
     font-size: .85em;

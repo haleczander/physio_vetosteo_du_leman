@@ -1,39 +1,26 @@
 /*---------------------------------- */
 /* NAVIGATION----------------------- */
-.nav{
+header{
     height: var(--hauteur-header);    
     width: 100vw;
-
     position:fixed;
-    top:0; left:0;
-
-    padding: 0;
-
     display:flex;
 
-    background: rgba(231, 239, 255,.95);
+    padding: .5em 0;
+
+    /* background: rgba(231, 239, 255,.95); */
     color:inherit;
     border-bottom: thin var(--clr-bleu-f) solid;
 
-    
     transition : background-color .5s ease-in-out;
-
-    z-index: 10;
 }
 
-.nav nav{
-    display: none;
-    width: 100%;
-    position: absolute;
-    top:0;
-}
 
-nav ul{
+header nav ul{
     text-transform: uppercase;
     letter-spacing: .075rem;
-    font-weight: 600;
 }
-nav ul li{
+header nav ul li{
     margin: auto;
     text-align: center;
 }
@@ -47,11 +34,27 @@ nav ul li{
 
 /*---------------------------------- */
 /* Nav Mobile */
-.nav input{
+#nav-cb{
     display: none;
 }
 
 @media (max-width:1024px){
+    header {
+        z-index: 10;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        padding: 1em;
+        line-height: 1.75;
+        background: var(--clr-teal-c);
+    }
+
+    .hamburger{
+        margin: 1em;
+    }
+
     .hamburger,
     .hamburger::before,
     .hamburger::after{
@@ -64,10 +67,7 @@ nav ul li{
         border-radius: 15px;
         transition: all .5s ease-in-out;
     }
-    .hamburger{
-        top:calc(0.45*var(--hauteur-header));
-        left: .75rem;
-    }
+
     .hamburger::before{
         transform: translateY(-.8rem);
     }
@@ -78,23 +78,16 @@ nav ul li{
     #nav-cb:checked ~ nav{
         display: block;
         padding-top: calc(1.5*var(--hauteur-header));
-        z-index:-1;
-        background: var(--clr-teal-c);
         color: var(--clr-bleu-f);
     }
-    #nav-cb:checked + .hamburger{
-        height: 0; width: 0;
-    }
-    #nav-cb:checked + .hamburger::before{
+
+    /* #nav-cb:checked + .hamburger::before{
         transform: rotate(45deg);
     }
     #nav-cb:checked + .hamburger::after{
         transform: rotate(-45deg);
-    }
+    } */
 
-    #nav-cb:checked ~ nav{
-        line-height: 1.75;
-    }
 }
 
 
@@ -102,18 +95,18 @@ nav ul li{
 /*---------------------------------- */
 /* LOGO----------------------------- */
 .logo{
-    margin: auto;
+    margin: 1em 0;
 }
 
 .logo img{
     padding:0.125rem;
-    height: var(--hauteur-header);width: auto;
+    height: var(--hauteur-header);
+    width: auto;
     transition: height .5s ease-in-out;
 }
 
 .nav_accueil .logo img,
 #nav-cb:checked ~ .logo img{
-    margin-top:5px;
     height: calc(1.5*var(--hauteur-header));
 }
 
