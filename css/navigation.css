@@ -1,18 +1,12 @@
 /*---------------------------------- */
 /* NAVIGATION----------------------- */
 header{
+    z-index: 10;
     height: var(--hauteur-header);    
     width: 100vw;
     position:fixed;
     display:flex;
-
-    padding: .5em 0;
-    background: var(--clr-bleu-xc);
-
-    color:inherit;
-    border-bottom: thin var(--clr-bleu-f) solid;
-
-    transition : background-color .5s ease-in-out;
+    padding: 0;
 }
 
 .hamburger {
@@ -21,15 +15,25 @@ header{
 
 header nav {
     position: absolute;
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    width: 100%;
+
+    background: var(--clr-bleu-xc);
+    color:inherit;
+    border-bottom: thin var(--clr-bleu-f) solid;
+    transition : background-color .5s ease-in-out;
+
+    text-transform: uppercase;
+    letter-spacing: .075rem;
+    font-weight: bolder;
 }
 
-.nav_accueil .logo img {
-    height: calc(1.8*var(--hauteur-header));
-} 
+header .logo {
+    margin: 0 auto;
+}
 
 header .logo img{
     padding:0.125rem;
@@ -38,14 +42,8 @@ header .logo img{
     transition: height .5s ease-in-out;
 }
 
-header nav .filler{
-    width: 30vw;
-}
-
 
 header nav ul{
-    text-transform: uppercase;
-    letter-spacing: .075rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -53,15 +51,16 @@ header nav ul{
     height: var(--hauteur-header);
 }
 
+header nav.welcome-hero-nav + .logo img {
+    height: calc(1.8*var(--hauteur-header));
+}   
 
 
 
-/* Nav Accueil */
-.nav_accueil{
-    background: transparent;
-    color:var(--clr-bleu-xc);
-    border-bottom: none;
-}
+header nav .filler{
+    width: 30vw;
+}  
+
 
 /*---------------------------------- */
 /* Nav Mobile */
@@ -69,16 +68,23 @@ header nav ul{
     display: none;
 }
 
+@media (min-width:1024px) {
+    header nav.welcome-hero-nav{
+        background: unset;
+        color:var(--clr-bleu-xc);
+        border-bottom: none;
+        text-shadow: 0 0 5px var(--clr-bleu-f);
+    }
+}
+
 @media (max-width:1024px){
     header {
-        z-index: 10;
         height: fit-content;
     }
 
     header nav {
         display: none;
         position: relative;
-        color: var(--clr-bleu-f);
         padding: 1em  0;
     }
 
@@ -89,7 +95,8 @@ header nav ul{
 
     .hamburger{
         display: block;
-        margin: .5em;
+        top: 1.5em;
+        left:.7em;
     }
 
     .hamburger,
@@ -97,7 +104,6 @@ header nav ul{
     .hamburger::after{
         z-index: 11;
         position: absolute;
-        left:0;
         content: '';
         width: 2.5rem;
         height: .3em;
@@ -111,6 +117,10 @@ header nav ul{
     }
     .hamburger::after{
         transform: translateY(.8rem);
+    }
+
+    header #nav-cb:checked ~ .logo{
+        display: none;
     }
 
     header #nav-cb:checked ~  nav{

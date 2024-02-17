@@ -202,48 +202,57 @@ table td+td{
 }
 
 /*---------------------------------- */
-/* HEADER -------------------------- */
-header{
-    position:relative;
+
+
+/* ACCUEIL ----------------------- */
+section.hero {
+    height: 50vh;
+    width: 100%; 
+    margin: 0;
     padding-top:calc(1.5*var(--hauteur-header));
-    
-    height: 50vh; 
-    text-align: center;
 
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
-
-    background-color: var(--clr-teal-c);
 
     background-repeat:no-repeat;
     background-attachment: scroll;
     background-size: cover;
 }
-header >*{
+.hero .content{
+    width: 90%;
     margin: auto;
     hyphens: manual;
     color:var(--clr-bleu-xxc);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 2;
+    
 }
-header h1{
+
+.hero .hero-content-title {
+    max-width: clamp(300px, 50%, 600px);
+    /* increase text shadow */
+    text-shadow: 0 0 5px 2px var(--clr-bleu-marine);
+}
+
+.hero .hero-content-title h1{
     font-family: 'Titillium Web', sans-serif;
     line-height: 1em;
-    font-size: 3em;
+    font-size: 4em;
 }
-header p{
+.hero .hero-content-title p{
     font-size: 1.75em;
 }
 
-
-/* ACCUEIL ----------------------- */
-#accueil header{
+.hero.welcome-hero{
     min-height: 100vh;
     height: fit-content;
 }
 .hero-actions{
     display: flex;
     justify-content: space-around;
-    margin: auto;
+    margin: 0;
 
 }
 /* Bouton ------------ */
@@ -257,31 +266,32 @@ header p{
     border:1px solid var(--clr-bleu-xc);
     height: fit-content;
     margin: 0 clamp(5px, 1vw, 10px);
+    text-decoration: none;
 }
 .hero-cta:hover{
     filter: brightness(140%) drop-shadow(0 0 10px var(--clr-bleu-f));
 }
 /* Défilement --- */    
-.hover-defilement{
+.welcome-hero-defilement-button{
     display: none;
 }
 
 /* BANNIERES --------------------- */
-#accueil header{
+.hero.welcome-hero{
     background-image:  url(../images/banner-min.jpg);
     background-position: top center;
 }
-#physio header{
+.hero.physio-hero{
     background-image:  url(../images/xenaphysio-min.jpg);
     background-position: center ;
 }
-#contact header{
+.hero.contact-hero{
     background-image:  url(../images/vitrine-min.jpg);
     background-position: center;
 }
-#tarifs header,
-#cgu header,
-#mentions-legales header{
+.hero.tarifs-hero,
+.hero.cgu-hero,
+.hero.mentions-legales-hero{
     background-image:  url(../images/tarifs-min.jpg);
     background-position: bottom;
 }
@@ -290,14 +300,17 @@ header p{
 /*---------------------------------- */
 /* SECTIONS------------------------- */
 section{
-    padding:1em;
+    padding:5em;
     position: relative;
-    margin:var(--hauteur-header) auto calc(2*var(--hauteur-header));
-    width: clamp(310px,80%,1100px);
+
+}
+
+section:not(.hero):nth-last-of-type(2n+2){
+    background: var(--clr-bleu-xc);
 }
 
 /* Separateur vague */
-section:nth-of-type(n+2)::before{
+section:nth-of-type(n+3)::before{
     content:'';
     
     position: absolute;
@@ -429,48 +442,45 @@ section:nth-of-type(n+2)::before{
 
 /*---------------------------------- */
 /* HEADER -------------------------- */
-    header{
-        padding-top:calc(2.5*var(--hauteur-header));
+    section.hero{
         background-attachment: fixed;
+        padding-top:calc(2*var(--hauteur-header));
     }
-    #accueil header{
+    .hero.welcome-hero{
         background-image:  url(../images/banner-med.jpg);
     }
-    #physio header{
+    .hero.physio-hero{
         background-image: url(../images/xenaphysio-med.jpg);
         position: bottom;
     }
-    #tarifs header, 
-    #cgu header, 
-    #mentions-legales header{
+    .hero.tarifs-hero,
+    .hero.cgu-hero,
+    .hero.mentions-legales-hero{
         background-image:  url(../images/tarifs-med.jpg);
     }
-    #contact header{
+    .hero.contact-hero{
         background-image:  url(../images/vitrine-med.jpg);
-    }
-    header h1{
-        font-size: 4em;
     }
 
 /* Défilement vers le bas ------- */
-    .hover-defilement{
+    .welcome-hero-defilement-button{
         display:block;
         position:absolute;
         bottom: 0;left:0;
+        text-align: center;
         min-width: 100%;
-        max-height: 5em;
         filter: opacity(.55);
         transition: all .5s ease-in-out;
     }
-    .hover-defilement i{
+    .welcome-hero-defilement-button i{
         color: var(--clr-bleu-marine);
-        font-size: 5em;
-        transform:scaleX(2);
+        font-size: 3.5em;
+        transform:scaleX(4);
     }
-    .hover-defilement:hover{
+    .welcome-hero-defilement-button:hover{
         filter: opacity(.85);
     }
-    .hover-defilement:hover::after{
+    .welcome-hero-defilement-button:hover::after{
         content:'';
         position: absolute;
         bottom: 0;left:0;
