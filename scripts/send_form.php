@@ -12,5 +12,5 @@ $headers='De :'.$from;
 $message=$headers."\n".$_POST['text'];
 mail($to, $subject, $message,$headers);
 
-header('Location:../pages/contact.html#mail-succes');
+header('Location:./contact.html#mail-succes');
 ?>

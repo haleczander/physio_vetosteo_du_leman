@@ -79,6 +79,10 @@ a{
     scroll-margin-top:var(--hauteur-header);
 }
 
+bdo {
+    white-space: nowrap;
+}
+
 bdo > b {
     font-size: 0.8em;
 }
@@ -261,21 +265,21 @@ header p{
 
 /* BANNIERES --------------------- */
 #accueil header{
-    background-image:  url(../images/banner-min.jpg);
+    background-image:  url(/images/banner-min.jpg);
     background-position: top center;
 }
 #physio header{
-    background-image:  url(../images/xenaphysio-min.jpg);
+    background-image:  url(/images/xenaphysio-min.jpg);
     background-position: center ;
 }
 #contact header{
-    background-image:  url(../images/vitrine-min.jpg);
+    background-image:  url(/images/vitrine-min.jpg);
     background-position: center;
 }
 #tarifs header,
 #cgu header,
 #mentions-legales header{
-    background-image:  url(../images/tarifs-min.jpg);
+    background-image:  url(/images/tarifs-min.jpg);
     background-position: bottom;
 }
 
@@ -300,7 +304,7 @@ section:nth-of-type(n+2)::before{
     width: 100%;
     height:calc(0.5*var(--hauteur-header));
 
-    background: center no-repeat url(../images/vague.svg);
+    background: center no-repeat url(/images/vague.svg);
     background-size: contain;
 }
 /*---------------------------------- */
@@ -427,19 +431,19 @@ section:nth-of-type(n+2)::before{
         background-attachment: fixed;
     }
     #accueil header{
-        background-image:  url(../images/banner-med.jpg);
+        background-image:  url(/images/banner-med.jpg);
     }
     #physio header{
-        background-image: url(../images/xenaphysio-med.jpg);
+        background-image: url(/images/xenaphysio-med.jpg);
         position: bottom;
     }
     #tarifs header, 
     #cgu header, 
     #mentions-legales header{
-        background-image:  url(../images/tarifs-med.jpg);
+        background-image:  url(/images/tarifs-med.jpg);
     }
     #contact header{
-        background-image:  url(../images/vitrine-med.jpg);
+        background-image:  url(/images/vitrine-med.jpg);
     }
     header h1{
         font-size: 4em;
@@ -538,6 +542,6 @@ section:nth-of-type(n+2)::before{
 
 @media (min-width:1280px){
     #accueil header{
-        background-image:  url(../images/banner-big.jpg);
+        background-image:  url(/images/banner-big.jpg);
     }
 }

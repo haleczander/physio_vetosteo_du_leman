@@ -7,7 +7,7 @@
 
     <!-- Infos Site -->
     <title>Physio Vet’Ostéo du Léman - Physiothérapie</title>
-    <link rel="icon" type="image/svg" href="../images/logo.svg">
+    <link rel="icon" type="image/svg" href="/images/logo.svg">
     <meta name="description" content="Cabinet vétérinaire consacré à la physiothérapie à Marin, Haute-Savoie. Détails sur la physiothérapie.">
     
     <!-- Robots -->
@@ -18,18 +18,19 @@
     <meta property='og:title' content="Physio Vet’Ostéo du Léman - Physiothérapie">
     <meta property='og:image' content="https://physiovetoduleman.com/images/logo.png">
     <meta property='og:description' content="Cabinet vétérinaire consacré à la physiothérapie à Marin, Haute-Savoie. Détails sur la physiothérapie.">
-    <meta property='og:url' content="https://physiovetoduleman.com/pages/physio.html">
+    <meta property='og:url' content="https://physiovetoduleman.com/physio.html">
 
     <!-- CSS -->
-    <link rel="stylesheet" id='style' href="../css/style.css?v=18">
+    <link rel="stylesheet" id='style' href="./css/style.css?v=18">
 
     <!-- SCRIPTS -->
+    <script src="main.js" defer></script>
     <script src="https://kit.fontawesome.com/4d8f658478.js" crossorigin="anonymous" defer></script> 
-    <script  type="text/javascript" src="../utilitaires/jquery-3.6.0.min.js"></script>   
+       
 
 
-    //<!-- ANALYTICS -->
-    //<!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- ANALYTICS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206863621-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -174,7 +175,7 @@
             <h2 id="faq3" class="anchor">Comment se passe la prise en charge?</h2>
                 <div class="texte-photo">
                     <div class="tp_photo">
-                        <img src="../images/bureau.jpg" alt="Photographie du bureau du Dr Charlotte Coevoet">
+                        <img src="/images/bureau.jpg" alt="Photographie du bureau du Dr Charlotte Coevoet">
                     </div>
                     <div class="tp_texte">
                         <p>La physiothérapie vétérinaire est une discipline réglementée, soumise aux règles établies par l’Ordre des Vétérinaires.</p>
@@ -234,7 +235,7 @@
                                     </ul>
                             </div>
                             <div class="tp_photo">
-                                <img class='' src="../images/tapis-hydro.jpg" alt="Tapis d'hydrothérapie Hydro Physio"> 
+                                <img class='' src="/images/tapis-hydro.jpg" alt="Tapis d'hydrothérapie Hydro Physio"> 
                             </div>
                                                            
                         </div>
@@ -266,7 +267,7 @@
                                     </ul>
                             </div>
                             <div class="tp_photo">
-                                <img src="../images/laser.jpg" alt="Soin par photobiomodulation d'un chat.">
+                                <img src="/images/laser.jpg" alt="Soin par photobiomodulation d'un chat.">
                             </div>                            
                                                             
                         </div>
@@ -304,7 +305,7 @@
                                     </ul>
                             </div>
                             <div class="tp_photo">
-                                <img class='placeholder' src="../images/placeholder.png" alt="Photographie à venir.">
+                                <img class='placeholder' src="/images/placeholder.png" alt="Photographie à venir.">
                             </div>
                                                             
                         </div>
@@ -334,7 +335,7 @@
                                     </ul>
                             </div>
                             <div class="tp_photo">
-                                <img class=''' src="../images/imoove2.jpg" alt="Bouledogue français sur la plateforme imoove vet.">
+                                <img class=''' src="/images/imoove2.jpg" alt="Bouledogue français sur la plateforme imoove vet.">
                             </div>
                                                             
                         </div>
@@ -364,7 +365,7 @@
                                     </ul>
                             </div>
                             <div class="tp_photo">
-                                <img class='placeholder' src="../images/placeholder.png" alt="Photographie à venir."> 
+                                <img class='placeholder' src="/images/placeholder.png" alt="Photographie à venir."> 
                             </div>
                                                            
                         </div>
@@ -402,7 +403,7 @@
                                     </ul>
                             </div>
                             <div class="tp_photo">
-                                <img class='placeholder' src="../images/placeholder.png" alt="Photographie à venir."> 
+                                <img class='placeholder' src="/images/placeholder.png" alt="Photographie à venir."> 
                             </div>
                                                            
                         </div>
@@ -411,21 +412,7 @@
             </ul>
         </section>
     </main>
-    <footer>
-
-    </footer>
-
-    <script>
-        $(document).ready(function(){
-            $('.nav').load('../imports/navigation.html');
-            $('footer').load('../imports/footer.html');
-
-            if (window.location.href.search("#anchor-") >= 0) {
-                $(window.location.href.split(".html")[1]).attr("open","");
-            }
-        });
-         
-    </script>
+    <footer></footer>
 </body>
 </html>
 
