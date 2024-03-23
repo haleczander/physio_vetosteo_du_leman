@@ -11,8 +11,8 @@
     --font-title: Montserrat;
 
     --clr-bleu-xf:#424656;
-    --clr-bleu-marine:#001B46;
-    --clr-bleu-f:#374d7f;
+    --clr-bleu-marine:rgb(0, 27, 70);
+    --clr-bleu-f:rgb(55, 77, 127);
     --clr-bleu-m:#4a5d91;
     --clr-bleu-c:#5c6ea4;
     --clr-bleu-xc:#E7EFFF;
@@ -369,6 +369,76 @@ section:nth-of-type(n+2)::before{
 }
 .item-d{
     grid-row: span 5;
+}
+
+/* CARDS ----------------------- */
+.card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-title {
+    margin: auto;
+    text-transform: uppercase;
+    color: white;
+    filter: drop-shadow(0 0 2px var(--clr-bleu-marine));
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.card h3 + * {
+    padding: 0;
+}
+
+.card-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-bleu-marine);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-title {
+    opacity: 0; 
+}
+
+.card:hover::before {
+    opacity: 0.5;
+}
+.card:hover .card-content {
+    opacity: 1;
+}
+
+.card-content {
+    --padding: 20px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--padding);
+    height: 100%;
+    width: 100%;
+    color: white;
+    opacity: 0;
 }
 
 
