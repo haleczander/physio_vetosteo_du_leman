@@ -300,13 +300,14 @@ section.hero {
 /*---------------------------------- */
 /* SECTIONS------------------------- */
 section{
-    padding:5em;
+    padding: 3.5em 10% 5em;
     position: relative;
 
 }
 
 section:not(.hero):nth-last-of-type(2n+2){
-    background: var(--clr-bleu-xc);
+    background: linear-gradient(180deg, var(--clr-bleu-xxc) -50%, var(--clr-bleu-xc), var(--clr-bleu-xxc) 150%);
+    /* background: var(--clr-bleu-xc); */
 }
 
 /* Separateur vague */
@@ -439,6 +440,31 @@ section:nth-of-type(n+3)::before{
         line-height: 1.5;
         border:1px var(--clr-bleu-c) solid;
     }
+
+/* TARIFS------------------------------------------------------------------------ */
+.section-tarifs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarifs-specialite{
+    margin: auto;
+    padding-left: unset;
+    min-width: 80%;max-width: 80%;
+    border-collapse: collapse;
+    border:1px solid var(--clr-bleu-f);
+    margin-bottom: 3rem;
+}
+
+.tarifs-specialite thead{
+    background-color: var(--clr-bleu-c);
+    color: var(--clr-bleu-xc);
+}
+
+.tarifs-specialite tbody tr:nth-child(odd){
+    background-color: var(--clr-bleu-xc);
+}
 
 /*---------------------------------- */
 /* HEADER -------------------------- */

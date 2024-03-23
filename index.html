@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirection</title>
-    <meta http-equiv="refresh" content="0; URL=pages/accueil.html" />
+    <title>Physio Vet’Ostéo du Léman</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" id='style' href="css/style.css">
+    <link rel="stylesheet" id='style' href="css/navigation.css">
+    <link rel="stylesheet" id='style' href="css/footer.css">
+
+    <!-- SCRIPTS -->
+    <script src="https://kit.fontawesome.com/4d8f658478.js" crossorigin="anonymous" defer></script>
+    <script src="./main.js" defer></script>
+
+    <!-- ANALYTICS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206863621-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-206863621-1');
+    </script>
+    
 </head>
 <body>
+    <header>
+        <input type="checkbox" id='nav-cb'>
+        <label for="nav-cb" class="hamburger shadow-light"></label>
+            
+        <nav class="welcome-hero-nav">
+            <ul>
+                <li><a href="accueil" title='Accueil'>Accueil</a></li>
+                <li><a href="physiotherapie" title='Physiothérapie'>Physiothérapie</a></li>
+            </ul>
+            <div class="filler"></div>
+            <ul>
+                <li><a href="tarifs" title='Tarifs'>Tarifs</a></li>
+                <li><a href="contact" title='Contact'>Contact</a></li>
+                <li><a href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" target="_blank" title='Planning Véto'>Rendez-Vous</a></li>
+            </ul>
+        </nav>
+
+        <div class="logo shadow-dark">
+            <a href="accueil" title='Physio Vet’Ostéo du Léman'>
+                <img src="../images/logo.svg" alt="Physio Vet’Ostéo du Léman - Logo">
+            </a>
+        </div>
+    </header>
+
+    <main>        
+    </main>
+
+    <footer id="footer">
+        <div class="footer-section"><h2>Notre site</h2>
+            <ul>
+                <li><a href="accueil" title='Accueil'>Accueil</a></li>
+                <li><a href="physiotherapie" title='Physiothérapie'>Physiothérapie</a></li>
+                <li><a href="tarifs" title='Tarifs'>Tarifs</a></li>
+                <li><a href="contact" title='Contact'>Contact</a></li>
+                <li><a href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title='Rendezvous'>Rendez-Vous</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section"><h2>Suivez-nous !</h2>
+            <ul>
+                <li><a target="_blank" href="https://www.facebook.com/Physio-V%C3%A9to-du-L%C3%A9man-103630238709709/" title='Facebook'>Facebook</a></li>
+                <li><a target="_blank" href="https://www.instagram.com/physiovetosteoduleman/" title='Instagram'>Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-section"><h2>Informations légales</h2>
+            <ul>
+                <li><a href="mentions-legales" title='Mentions légales'>Mentions légales</a></li>
+                <li><a href="cgu" title='Conditions générales'>Conditions générales</a></li>
+            </ul>
+        </div>        
+
+        <img class="logo shadow-light" src="../images/logo.svg" alt="Physio Vet’Ostéo du Léman - Logo">
+        <p class='rights'>Physio Vet’Ostéo du Léman - 2024 - Tous droits réservés</p>    
+    </footer>
+
 </body>
 </html>

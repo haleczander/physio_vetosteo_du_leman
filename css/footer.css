@@ -34,8 +34,11 @@ footer .rights {
         margin-left: 0;
     }
 
-    .footer-section > ul{
+    .footer-section {
         text-align: left;
+    }
+
+    .footer-section > ul{
         text-indent: 2ch;
     }
 
