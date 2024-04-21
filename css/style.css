@@ -79,6 +79,10 @@ a{
     scroll-margin-top:var(--hauteur-header);
 }
 
+bdo {
+    white-space: nowrap;
+}
+
 bdo > b {
     font-size: 0.8em;
 }
@@ -437,9 +441,12 @@ section:nth-of-type(n+2)::before{
     #cgu header, 
     #mentions-legales header{
         background-image:  url(../images/tarifs-med.jpg);
+        background-position: top;
     }
     #contact header{
         background-image:  url(../images/vitrine-med.jpg);
+
+        background-position: top;
     }
     header h1{
         font-size: 4em;
@@ -519,9 +526,13 @@ section:nth-of-type(n+2)::before{
         padding: .5em;
         text-align: center;
         border-left: var(--border);
+        display: flex;
+        flex-direction: column;
     }
-    .equipement-img img{
-        width: 100%; height: auto;
+    .equipement-img img{   
+        margin: auto;     
+        object-fit: contain;
+        width: 100% !important; height: auto;
         max-height: 100%; width: auto;
     }
     .equipement-description{

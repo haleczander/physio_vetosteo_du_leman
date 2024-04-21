@@ -7,7 +7,7 @@
 
     <!-- Infos Site -->
     <title>Physio Vet’Ostéo du Léman - Contact</title>
-    <link rel="icon" type="image/svg" href="../images/logo.svg">
+    <link rel="icon" type="image/svg" href="./images/logo.svg">
     <meta name="description" content="Cabinet vétérinaire consacré à la physiothérapie à Marin, Haute-Savoie. Informations pratiques.">
   
 
@@ -18,17 +18,18 @@
     <meta property='og:title' content="Physio Vet’Ostéo du Léman - Coordonnées">
     <meta property='og:image' content="https://physiovetoduleman.com/images/logo.png">
     <meta property='og:description' content="Cabinet vétérinaire consacré à la physiothérapie à Marin, Haute-Savoie. Informations pratiques.">
-    <meta property='og:url' content="https://physiovetoduleman.com/pages/contact.html">
+    <meta property='og:url' content="https://physiovetoduleman.com/contact.html">
 
     <!-- CSS -->
-    <link rel="stylesheet" id='style' href="../css/style.css?v=18">
+    <link rel="stylesheet" id='style' href="./css/style.css?v=18">
 
     <!-- SCRIPTS -->
+    <script src="main.js" defer></script>
     <script src="https://kit.fontawesome.com/4d8f658478.js" crossorigin="anonymous" defer></script>
-    <script  type="text/javascript" src="../utilitaires/jquery-3.6.0.min.js"></script>   
+       
 
 
-<script  type="text/javascript" src="../utilitaires/jquery-3.6.0.min.js"></script>    <!-- ANALYTICS -->
+    <!-- ANALYTICS -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206863621-1"></script>
     <script>
@@ -53,7 +54,7 @@
     <section class="rendezvous">
         <h2>Prise de rendez-vous</h2>
         <p>Les rendez-vous se prennent depuis la plateforme : 
-            <a href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title="Lien vers la plateforme"><b>Planning Véto</b> <i>(lien)</i> </a>
+            <a target="_blank" href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title="Lien vers la plateforme"><b>Planning Véto</b> <i>(lien)</i> </a>
         </p>
     </section>
 
@@ -95,7 +96,7 @@
         </section>
         <!-- <section class="contact">
             <h2>Nous écrire</h2>
-            <form class="formulaire-contact" name="form" action="../utilitaires/send_form.php" method="POST">
+            <form class="formulaire-contact" name="form" action="./scripts/send_form.php" method="POST">
                 <input type="text" class="item-a" name="nom" placeholder="Identité" required>
                 <input type="email" class="item-b" name="mail" placeholder="Email" required>
                 <input type="tel" class="item-c" name="tel" placeholder="Téléphone" required>
@@ -104,15 +105,6 @@
             </form>    
         </section> -->
     </main>
-    <footer>
-
-    </footer>
-    <script>
-        $(document).ready(function(){
-            $('.nav').load('../imports/navigation.html');
-            $('footer').load('../imports/footer.html');
-            if(window.location.href.indexOf('mail-succes') > -1){alert('Message envoyé avec succès!');};
-        });
-    </script>
+    <footer></footer>
 </body>
 </html>
