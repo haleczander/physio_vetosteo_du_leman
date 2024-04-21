@@ -441,9 +441,12 @@ section:nth-of-type(n+2)::before{
     #cgu header, 
     #mentions-legales header{
         background-image:  url(../images/tarifs-med.jpg);
+        background-position: top;
     }
     #contact header{
         background-image:  url(../images/vitrine-med.jpg);
+
+        background-position: top;
     }
     header h1{
         font-size: 4em;
