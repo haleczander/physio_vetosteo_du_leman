@@ -523,9 +523,13 @@ section:nth-of-type(n+2)::before{
         padding: .5em;
         text-align: center;
         border-left: var(--border);
+        display: flex;
+        flex-direction: column;
     }
-    .equipement-img img{
-        width: 100%; height: auto;
+    .equipement-img img{   
+        margin: auto;     
+        object-fit: contain;
+        width: 100% !important; height: auto;
         max-height: 100%; width: auto;
     }
     .equipement-description{
