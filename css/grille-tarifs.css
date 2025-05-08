@@ -19,6 +19,10 @@
     color: var(--clr-bleu-xc);
 }
 
+.tarifs-specialite td{
+    padding: 0.5rem 1rem ;
+}
+
 .tarifs-specialite tbody tr:nth-child(odd){
     background-color: var(--clr-bleu-xc);
 }
