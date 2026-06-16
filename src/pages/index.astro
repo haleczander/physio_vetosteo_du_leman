@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import EquipmentCard from "../components/EquipmentCard.astro";
+import equipments from "../data/equipments.json";
 ---
 
 <BaseLayout
@@ -56,152 +58,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <section class="anchor equipements" id="equipements">
       <h2>Les équipements du cabinet</h2>
-      <div class="equipements-wrapper">
-        <div class="equipements-liste">
-          <details open>
-            <summary>Tapis d'hydrothérapie</summary>
-            <div class="equipement-wrapper">
-              <div class="equipement-img">
-                <img src="/images/tapis-hydro.jpg" alt="Tapis Hydro Physio" />
-              </div>
-              <div class="equipement-description">
-                <table>
-                  <tr>
-                    <td><b>Modèle</b></td>
-                    <td>Hydro Physio (<i>version longue</i>)</td>
-                  </tr>
-                  <tr>
-                    <td><b>Espèces</b></td>
-                    <td>
-                      <span class="liste-especes">
-                        <i class="fas fa-cat icon"><span>Chat</span></i>
-                        <i class="fas fa-dog icon"><span>Chien</span></i>
-                        <span class="icon">NAC</span>
-                      </span>
-                    </td>
-                  </tr>
-                </table>
-                <p>La taille du tapis de marche immergé permet aux chiens de grande taille de profiter également des bienfaits de l'eau.</p>
-                <a href="/physio#anchor-hydro" title="En savoir plus" class="equipement-lien">Plus d'informations</a>
-              </div>
-            </div>
-          </details>
-          <details>
-            <summary>Laser thérapeutique</summary>
-            <div class="equipement-wrapper">
-              <div class="equipement-img">
-                <img src="/images/laser.jpg" alt="Photo d'un chat soigné par photobiomodulation" />
-              </div>
-              <div class="equipement-description">
-                <table>
-                  <tr>
-                    <td><b>Modèle</b></td>
-                    <td>K-laser Cube 4</td>
-                  </tr>
-                  <tr>
-                    <td><b>Espèces</b></td>
-                    <td>
-                      <span class="liste-especes">
-                        <i class="fas fa-cat icon"><span>Chat</span></i>
-                        <i class="fas fa-dog icon"><span>Chien</span></i>
-                        <i class="fas fa-horse icon"><span>Cheval</span></i>
-                        <span class="icon">NAC</span>
-                      </span>
-                    </td>
-                  </tr>
-                </table>
-                <p>Le laser thérapeutique peut soulager les douleurs de vos animaux ainsi que les aider dans leur rétablissement de manière non invasive.</p>
-                <a href="/physio#anchor-laser" title="En savoir plus" class="equipement-lien">Plus d'informations</a>
-              </div>
-            </div>
-          </details>
-          <details>
-            <summary>Appareil d'électro-stimulation</summary>
-            <div class="equipement-wrapper">
-              <div class="equipement-img">
-                <img class="placeholder" src="/images/placeholder.png" alt="Photographie à venir." />
-              </div>
-              <div class="equipement-description">
-                <table>
-                  <tr>
-                    <td><b>Modèle</b></td>
-                    <td>Stim Vet 100</td>
-                  </tr>
-                  <tr>
-                    <td><b>Espèces</b></td>
-                    <td>
-                      <span class="liste-especes">
-                        <i class="fas fa-cat icon"><span>Chat</span></i>
-                        <i class="fas fa-dog icon"><span>Chien</span></i>
-                        <i class="fas fa-horse icon"><span>Cheval</span></i>
-                        <span class="icon">NAC</span>
-                      </span>
-                    </td>
-                  </tr>
-                </table>
-                <p>Cet appareil très intuitif pourra vous être proposé à la location afin que vous puissiez effectuer les soins chez vous.</p>
-                <a href="/physio#anchor-electro" title="En savoir plus" class="equipement-lien">Plus d'informations</a>
-              </div>
-            </div>
-          </details>
-          <details>
-            <summary>Imoove Vet</summary>
-            <div class="equipement-wrapper">
-              <div class="equipement-img">
-                <img src="/images/imoove.jpg" alt="Photo d'un soin par Imoove Vet" />
-              </div>
-              <div class="equipement-description">
-                <table>
-                  <tr>
-                    <td><b>Modèle</b></td>
-                    <td>Imoove Vet</td>
-                  </tr>
-                  <tr>
-                    <td><b>Espèces</b></td>
-                    <td>
-                      <span class="liste-especes">
-                        <i class="fas fa-cat icon"><span>Chat</span></i>
-                        <i class="fas fa-dog icon"><span>Chien</span></i>
-                        <span class="icon">NAC</span>
-                      </span>
-                    </td>
-                  </tr>
-                </table>
-                <p>La plateforme de proprioception améliorera la vitalité, l'équilibre, la mobilité ainsi que l'agilité de votre animal de compagnie.</p>
-                <a href="/physio#anchor-proprio" title="En savoir plus" class="equipement-lien">Plus d'informations</a>
-              </div>
-            </div>
-          </details>
-          <details>
-            <summary>Couloir de rééducation</summary>
-            <div class="equipement-wrapper">
-              <div class="equipement-img">
-                <img src="/images/proprio.jpg" alt="Chien sur un ballon de rééducation" />
-              </div>
-              <div class="equipement-description">
-                <table>
-                  <tr>
-                    <td><b>Matériel</b></td>
-                    <td>Ballon de physiothérapie<br />Cavalettis<br />Plots</td>
-                  </tr>
-                  <tr>
-                    <td><b>Espèces</b></td>
-                    <td>
-                      <span class="liste-especes">
-                        <i class="fas fa-cat icon"><span>Chat</span></i>
-                        <i class="fas fa-dog icon"><span>Chien</span></i>
-                        <span class="icon">NAC</span>
-                      </span>
-                    </td>
-                  </tr>
-                </table>
-                <p>Permet de travailler sur la proprioception, le mouvement ou encore l'équilibre en fonction des besoins spécifiques de vos animaux.</p>
-                <a href="/physio#anchor-proprio" title="En savoir plus" class="equipement-lien">Plus d'informations</a>
-              </div>
-            </div>
-          </details>
-        </div>
-        <div class="equipements-dummy"></div>
+      <div class="equipements-grid">
+        {equipments.map((item) => <EquipmentCard {...item} />)}
       </div>
     </section>
   </main>
@@ -219,14 +77,5 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     syncHomeNav();
     window.addEventListener("scroll", syncHomeNav);
-
-    document.querySelectorAll(".equipements-liste details").forEach((detail) => {
-      detail.addEventListener("toggle", () => {
-        if (!detail.open) return;
-        document.querySelectorAll(".equipements-liste details").forEach((other) => {
-          if (other !== detail) other.removeAttribute("open");
-        });
-      });
-    });
   </script>
 </BaseLayout>

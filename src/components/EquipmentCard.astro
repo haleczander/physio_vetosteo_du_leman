@@ -1,0 +1,41 @@
+---
+interface SpeciesItem {
+  label: string;
+  iconClass?: string;
+}
+
+interface Props {
+  imageSrc: string;
+  imageAlt: string;
+  category: string;
+  name: string;
+  species: SpeciesItem[];
+  equipment: string;
+  description: string;
+  href: string;
+}
+
+const { imageSrc, imageAlt, category, name, species, equipment, description, href } = Astro.props;
+---
+
+<article class="equipement-card shadow-light">
+  <div class="equipement-media">
+    <img src={imageSrc} alt={imageAlt} />
+  </div>
+  <div class="equipement-body">
+    <p class="equipement-kicker">{category}</p>
+    <h3>{name}</h3>
+    <p class="equipement-species" aria-label="Animaux concernés">
+      {species.map((item) =>
+        item.iconClass ? (
+          <i class={`${item.iconClass} icon`}><span>{item.label}</span></i>
+        ) : (
+          <span class="icon">{item.label}</span>
+        ),
+      )}
+    </p>
+    <p class="equipement-meta"><b>Matériel</b> {equipment}</p>
+    <p class="equipement-description">{description}</p>
+    <a href={href} title="En savoir plus">En savoir plus</a>
+  </div>
+</article>
