@@ -1,0 +1,30 @@
+[
+  {
+    "day": "Lundi",
+    "hours": "8h30-18h00"
+  },
+  {
+    "day": "Mardi",
+    "hours": "8h30-18h00"
+  },
+  {
+    "day": "Mercredi",
+    "hours": "8h30-18h00"
+  },
+  {
+    "day": "Jeudi",
+    "hours": "8h30-18h00"
+  },
+  {
+    "day": "Vendredi",
+    "hours": "8h30-18h00"
+  },
+  {
+    "day": "Samedi",
+    "hours": "8h30-12h00"
+  },
+  {
+    "day": "Dimanche",
+    "hours": "Fermé"
+  }
+]

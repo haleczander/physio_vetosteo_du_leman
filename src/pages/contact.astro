@@ -1,5 +1,6 @@
-﻿---
+---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import openingHours from "../data/opening-hours.json";
 ---
 
 <BaseLayout
@@ -30,14 +31,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <section class="horaires">
       <h2>Les horaires du cabinet</h2>
       <table>
-        <tr>
-          <td>Lundi-Vendredi</td>
-          <td>8h30-18h00</td>
-        </tr>
-        <tr>
-          <td>Samedi</td>
-          <td>8h30-12h00</td>
-        </tr>
+        {openingHours.map((entry) => (
+          <tr>
+            <td>{entry.day}</td>
+            <td>{entry.hours}</td>
+          </tr>
+        ))}
       </table>
     </section>
 
@@ -63,5 +62,3 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
   </script>
 </BaseLayout>
-
-
