@@ -52,27 +52,46 @@ nav ul li{
 }
 
 @media (max-width:1024px){
-    .hamburger,
+    .hamburger{
+        --hamburger-bar-width: 2.5rem;
+        --hamburger-bar-height: .3em;
+        --hamburger-bar-left: .375rem;
+        --hamburger-bar-gap: .45rem;
+        --hamburger-bar-top: .5rem;
+    }
+    .hamburger{
+        position: absolute;
+        top: calc((var(--hauteur-header) - 2.5rem) / 2);
+        left: .5rem;
+        display: block;
+        width: 3.25rem;
+        height: 2.5rem;
+        cursor: pointer;
+        z-index: 11;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .hamburger-line,
     .hamburger::before,
     .hamburger::after{
         position: absolute;
-        left:0;
         content: '';
-        width: 2.5rem;
-        height: .3em;
+        left: var(--hamburger-bar-left);
+        width: var(--hamburger-bar-width);
+        height: var(--hamburger-bar-height);
         background: var(--clr-bleu-c);
         border-radius: 15px;
         transition: all .5s ease-in-out;
     }
-    .hamburger{
-        top:calc(0.45*var(--hauteur-header));
-        left: .75rem;
-    }
     .hamburger::before{
-        transform: translateY(-.8rem);
+        top: var(--hamburger-bar-top);
+    }
+    .hamburger-line{
+        top: calc(var(--hamburger-bar-top) + var(--hamburger-bar-height) + var(--hamburger-bar-gap));
+        display: block;
+        opacity: 1;
     }
     .hamburger::after{
-        transform: translateY(.8rem);
+        top: calc(var(--hamburger-bar-top) + (2 * (var(--hamburger-bar-height) + var(--hamburger-bar-gap))));
     }
 
     #nav-cb:checked ~ nav{
@@ -83,12 +102,17 @@ nav ul li{
         color: var(--clr-bleu-f);
     }
     #nav-cb:checked + .hamburger{
-        height: 0; width: 0;
+        background: transparent;
+    }
+    #nav-cb:checked + .hamburger .hamburger-line{
+        opacity: 0;
     }
     #nav-cb:checked + .hamburger::before{
+        top: calc(var(--hamburger-bar-top) + var(--hamburger-bar-height) + var(--hamburger-bar-gap));
         transform: rotate(45deg);
     }
     #nav-cb:checked + .hamburger::after{
+        top: calc(var(--hamburger-bar-top) + var(--hamburger-bar-height) + var(--hamburger-bar-gap));
         transform: rotate(-45deg);
     }
 
