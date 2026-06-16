@@ -15,33 +15,37 @@ const navClass = isHome ? "nav nav_accueil" : "nav";
     <input type="checkbox" id="nav-cb" />
     <label for="nav-cb" class="hamburger shadow-light"><span class="hamburger-line"></span></label>
 
-    <a href="/" title="Physio Vet’Ostéo du Léman" class="logo shadow-light">
-      <img src="/images/logo.svg" alt="Physio Vet’Ostéo du Léman - Logo" />
+    <a href="/" title="Physio Vet’Ostéo du Léman" class="brand shadow-light">
+      <span class="logo">
+        <img src="/images/logo.svg" alt="Physio Vet’Ostéo du Léman - Logo" />
+      </span>
+      <span class="site-name">Physio Vet’Ostéo du Léman</span>
     </a>
 
     <nav>
       <ul>
         <li><a href="/" title="Accueil">Accueil</a></li>
         <li><a href="/physio" title="Physiothérapie">Physiothérapie</a></li>
-      </ul>
-      <ul>
         <li><a href="/tarifs" title="Tarifs">Tarifs</a></li>
         <li><a href="/contact" title="Contact">Contact</a></li>
-        <li><a href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title="Rendezvous">Rendez-Vous</a></li>
+        <li><a class="nav-cta" href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title="Rendezvous">Rendez-Vous</a></li>
       </ul>
     </nav>
   </div>
 
-  <h1 set:html={title}></h1>
-  {heroSubtitle && <p class="shadow-dark">{heroSubtitle}</p>}
+  <div class="hero-shell">
+    <div class="hero-copy">
+      <h1 set:html={title}></h1>
+      {heroSubtitle && <p class="shadow-dark">{heroSubtitle}</p>}
+    </div>
 
-  {isHome && (
-    <>
+    {isHome && (
       <ul class="hero-actions no-dot">
         <li><a class="hero-cta btn shadow-dark" href="/contact" title="Vers les informations de contact">Contact</a></li>
         <li><a class="hero-cta btn shadow-dark" href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title="Vers la plateforme de rendez-vous">Rendez-vous</a></li>
       </ul>
-      <a href="#intro" class="hover-defilement"><i class="fas fa-chevron-down" title="Défiler vers le bas"></i></a>
-    </>
-  )}
+    )}
+  </div>
+
+  {isHome && <a href="#intro" class="hover-defilement"><i class="fas fa-chevron-down" title="Défiler vers le bas"></i></a>}
 </header>
