@@ -375,6 +375,9 @@ section:nth-of-type(n+2)::before{
     li+li{
         margin-top:.5em;
     }
+    .hero-actions li+li{
+        margin-top: 0;
+    }
 }
 
 @media (min-width:1025px){  
