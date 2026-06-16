@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+  heroSubtitle?: string;
+  isHome?: boolean;
+}
+
+const { title, heroSubtitle, isHome = false } = Astro.props;
+const headerClass = isHome ? "section-hero banner-accueil anchor" : undefined;
+const navClass = isHome ? "nav nav_accueil" : "nav";
+---
+
+<header class={headerClass}>
+  <div id="nav" class={navClass}>
+    <input type="checkbox" id="nav-cb" />
+    <label for="nav-cb" class="hamburger shadow-light"></label>
+
+    <a href="/" title="Physio Vet’Ostéo du Léman" class="logo shadow-light">
+      <img src="/images/logo.svg" alt="Physio Vet’Ostéo du Léman - Logo" />
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="/" title="Accueil">Accueil</a></li>
+        <li><a href="/physio" title="Physiothérapie">Physiothérapie</a></li>
+      </ul>
+      <ul>
+        <li><a href="/tarifs" title="Tarifs">Tarifs</a></li>
+        <li><a href="/contact" title="Contact">Contact</a></li>
+        <li><a href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title="Rendezvous">Rendez-Vous</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <h1 set:html={title}></h1>
+  {heroSubtitle && <p class="shadow-dark">{heroSubtitle}</p>}
+
+  {isHome && (
+    <>
+      <ul class="hero-actions no-dot">
+        <li><a class="hero-cta btn shadow-dark" href="/contact" title="Vers les informations de contact">Contact</a></li>
+        <li><a class="hero-cta btn shadow-dark" href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title="Vers la plateforme de rendez-vous">Rendez-vous</a></li>
+      </ul>
+      <a href="#intro" class="hover-defilement"><i class="fas fa-chevron-down" title="Défiler vers le bas"></i></a>
+    </>
+  )}
+</header>

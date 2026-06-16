@@ -1,0 +1,69 @@
+name: Build Site Archive
+
+on:
+  push:
+    branches:
+      - main
+      - migration/astro
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-archive:
+    runs-on: ubuntu-latest
+    env:
+      ASTRO_TELEMETRY_DISABLED: "1"
+      RELEASE_TAG: site-archive-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Compute archive name
+        id: archive
+        run: |
+          safe_ref=$(echo "${GITHUB_REF_NAME}" | tr '/' '-')
+          echo "safe_ref=$safe_ref" >> "$GITHUB_OUTPUT"
+          echo "zip_name=physiovetoduleman-${safe_ref}-${GITHUB_SHA}.zip" >> "$GITHUB_OUTPUT"
+
+      - name: Create archive
+        run: |
+          mkdir -p out
+          zip -r "out/${{ steps.archive.outputs.zip_name }}" dist
+
+      - name: Move release tag to current commit
+        run: |
+          git tag -f "$RELEASE_TAG" "$GITHUB_SHA"
+          git push origin "refs/tags/$RELEASE_TAG" --force
+
+      - name: Create release if missing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "$RELEASE_TAG" >/dev/null 2>&1 || \
+          gh release create "$RELEASE_TAG" \
+            --title "Latest Site Archive" \
+            --notes "Archive ZIP générée automatiquement par GitHub Actions." \
+            --prerelease
+
+      - name: Upload archive to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "$RELEASE_TAG" out/*.zip --clobber
