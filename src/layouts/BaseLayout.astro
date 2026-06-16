@@ -1,0 +1,75 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  bodyId: string;
+  title: string;
+  description: string;
+  ogTitle: string;
+  ogDescription: string;
+  ogUrl: string;
+  pageTitle: string;
+  heroSubtitle?: string;
+  isHome?: boolean;
+  includeTariffStyles?: boolean;
+}
+
+const {
+  bodyId,
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  ogUrl,
+  pageTitle,
+  heroSubtitle,
+  isHome = false,
+  includeTariffStyles = false,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="all" />
+
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:image" content="https://physiovetoduleman.com/images/logo.png" />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:url" content={ogUrl} />
+
+    {isHome && <meta name="google-site-verification" content="BdbWjK2Pr7frF_aAnnWBYIHugC9yA9MC7XoOYVyzEiw" />}
+
+    <link rel="stylesheet" href="/css/style.css?v=19" />
+    <link rel="stylesheet" href="/css/navigation.css?v=4" />
+    <link rel="stylesheet" href="/css/footer.css?v3" />
+    {includeTariffStyles && <link rel="stylesheet" href="/css/grille-tarifs.css?v=2" />}
+
+    <script src="https://kit.fontawesome.com/4d8f658478.js" crossorigin="anonymous" defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206863621-1"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-206863621-1");
+    </script>
+    <slot name="head" />
+  </head>
+
+  <body id={bodyId}>
+    <Header title={pageTitle} heroSubtitle={heroSubtitle} isHome={isHome} />
+    <slot />
+    <Footer />
+    <slot name="scripts" />
+  </body>
+</html>
