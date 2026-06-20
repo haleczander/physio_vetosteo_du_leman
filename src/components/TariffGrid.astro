@@ -33,7 +33,7 @@ const hasDetails = (row: TariffPricedRow) => Boolean(row.meta || row.details?.le
 ---
 
 <Fragment>
-  <h3>Tarifs en vigueur au {tariffData.effectiveDate}</h3>
+  <h3>Tarifs en vigueur au {tariffData.effectiveDate}*</h3>
 
   {tariffData.sections.map((section) => (
     <table class="tarifs-specialite">
