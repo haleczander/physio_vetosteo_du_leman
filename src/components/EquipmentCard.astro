@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import tapisHydroImage from "../assets/images/tapis-hydro.jpg";
+import laserImage from "../assets/images/laser.jpg";
+import placeholderImage from "../assets/images/placeholder.png";
+import imooveImage from "../assets/images/imoove.jpg";
+import proprioImage from "../assets/images/proprio.jpg";
+
+interface Props {
+  imageSrc: string;
+  imageAlt: string;
+  category: string;
+  name: string;
+  species: string[];
+  equipment: string;
+  description: string;
+  href: string;
+}
+
+const { imageSrc, imageAlt, category, name, species, equipment, description, href } = Astro.props;
+
+const imageMap = {
+  "/images/tapis-hydro.jpg": tapisHydroImage,
+  "/images/laser.jpg": laserImage,
+  "/images/placeholder.png": placeholderImage,
+  "/images/imoove.jpg": imooveImage,
+  "/images/proprio.jpg": proprioImage,
+} as const;
+
+const resolvedImage = imageMap[imageSrc as keyof typeof imageMap];
+
+if (!resolvedImage) {
+  throw new Error(`Unsupported equipment image: ${imageSrc}`);
+}
+
+const speciesIconMap: Record<string, string | undefined> = {
+  Chat: "fas fa-cat",
+  Chien: "fas fa-dog",
+  Cheval: "fas fa-horse",
+  NAC: undefined,
+};
+---
+
+<article class="equipement-card shadow-light">
+  <div class="equipement-media">
+    <Image
+      src={resolvedImage}
+      alt={imageAlt}
+      loading="lazy"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    />
+  </div>
+  <div class="equipement-body">
+    <p class="equipement-kicker">{category}</p>
+    <h3>{name}</h3>
+    <p class="equipement-species" aria-label="Animaux concernés">
+      {species.map((label) =>
+        speciesIconMap[label] ? (
+          <i class={`${speciesIconMap[label]} icon`}><span>{label}</span></i>
+        ) : (
+          <span class="icon">{label}</span>
+        ),
+      )}
+    </p>
+    <p class="equipement-meta"><b>Matériel</b> {equipment}</p>
+    <p class="equipement-description">{description}</p>
+    <a href={href} title="En savoir plus">En savoir plus</a>
+  </div>
+</article>

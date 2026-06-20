@@ -1,52 +1,56 @@
-﻿---
+---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import openingHours from "../data/opening-hours.json";
 ---
 
 <BaseLayout
   bodyId="contact"
-  title="Physio Vet'Ostéo du Léman - Contact"
-  description="Cabinet vétérinaire consacré à la physiothérapie à Marin, Haute-Savoie. Informations pratiques."
-  ogTitle="Physio Vet'Ostéo du Léman - Coordonnées"
-  ogDescription="Cabinet vétérinaire consacré à la physiothérapie à Marin, Haute-Savoie. Informations pratiques."
+  title={"Physio Vet'Ost\u00e9o du L\u00e9man - Contact"}
+  description={"Cabinet v\u00e9t\u00e9rinaire consacr\u00e9 \u00e0 la physioth\u00e9rapie \u00e0 Marin, Haute-Savoie. Informations pratiques."}
+  ogTitle={"Physio Vet'Ost\u00e9o du L\u00e9man - Coordonn\u00e9es"}
+  ogDescription={"Cabinet v\u00e9t\u00e9rinaire consacr\u00e9 \u00e0 la physioth\u00e9rapie \u00e0 Marin, Haute-Savoie. Informations pratiques."}
   ogUrl="https://physiovetoduleman.com/contact"
   pageTitle="Contact"
 >
+  <header class="page-hero">
+    <h1>Contact</h1>
+  </header>
+
   <main class="contact">
     <section class="rendezvous">
       <h2>Prise de rendez-vous</h2>
-      <p>Les rendez-vous se prennent depuis la plateforme : <a href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title="Lien vers la plateforme"><b>Planning Véto</b> <i>(lien)</i></a></p>
+      <p>Les rendez-vous se prennent depuis la plateforme : <a href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title="Lien vers la plateforme"><b>Planning V&eacute;to</b> <i>(lien)</i></a></p>
     </section>
 
     <section class="coordonnees">
-      <h2>Coordonnées</h2>
+      <h2>Coordonn&eacute;es</h2>
       <ul class="no-dot">
         <li><i class="fas fa-phone-alt icon"></i><bdo dir="rtl">15 25 61 05 4 33+</bdo></li>
         <li><i class="fas fa-at icon"></i><a href="mailto:physiovetoduleman@gmail.com">physiovetoduleman@gmail.com</a></li>
-        <li><i class="fas fa-map-marker-alt icon"></i><span>68 Contre-Allée du Larry, 74200 Marin</span></li>
+        <li><i class="fas fa-map-marker-alt icon"></i><span>68 Contre-All&eacute;e du Larry, 74200 Marin</span></li>
       </ul>
-      <b>En cas d'urgence, la garde vétérinaire est disponible au numéro du cabinet.</b>
+      <b>En cas d'urgence, la garde v&eacute;t&eacute;rinaire est disponible au num&eacute;ro du cabinet.</b>
     </section>
 
     <section class="horaires">
       <h2>Les horaires du cabinet</h2>
       <table>
-        <tr>
-          <td>Lundi-Vendredi</td>
-          <td>8h30-18h00</td>
-        </tr>
-        <tr>
-          <td>Samedi</td>
-          <td>8h30-12h00</td>
-        </tr>
+        {openingHours.map((entry) => (
+          <tr>
+            <td>{entry.day}</td>
+            <td>{entry.hours}</td>
+          </tr>
+        ))}
       </table>
     </section>
 
     <section class="map">
       <h2>Nous trouver</h2>
-      <p>Le cabinet est situé sur la commune de Marin, entre Évian et Thonon-les-Bains.</p>
+      <p>Le cabinet est situ&eacute; sur la commune de Marin, entre &Eacute;vian et Thonon-les-Bains.</p>
       <div class="contact-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d265930.0210544716!2d6.354987063499301!3d46.3844400082075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c3c3a631f3193%3A0x6c9bde0f830c5877!2s68%20Contre%20All%C3%A9e%20du%20Larry%2C%2074200%20Marin!5e1!3m2!1sfr!2sfr!4v1619170102591!5m2!1sfr!2sfr"
+          title="Carte Google Maps du cabinet Physio Vet'Ostéo du Léman à Marin"
           width="800"
           height="600"
           style="border:0;"
@@ -59,9 +63,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <script slot="scripts" is:inline>
     if (window.location.href.indexOf("mail-succes") > -1) {
-      alert("Message envoyé avec succès!");
+      alert("Message envoy\u00e9 avec succ\u00e8s!");
     }
   </script>
 </BaseLayout>
-
-

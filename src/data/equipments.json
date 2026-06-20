@@ -1,0 +1,52 @@
+[
+  {
+    "imageSrc": "/images/tapis-hydro.jpg",
+    "imageAlt": "Tapis Hydro Physio",
+    "category": "Hydrothérapie",
+    "name": "Tapis d'hydrothérapie",
+    "species": ["Chat", "Chien", "NAC"],
+    "equipment": "Hydro Physio (version longue)",
+    "description": "La taille du tapis de marche immergé permet aux chiens de grande taille de profiter également des bienfaits de l'eau.",
+    "href": "/physio#anchor-hydro"
+  },
+  {
+    "imageSrc": "/images/laser.jpg",
+    "imageAlt": "Chat soigné par photobiomodulation",
+    "category": "Gestion de la douleur",
+    "name": "Laser thérapeutique",
+    "species": ["Chat", "Chien", "Cheval", "NAC"],
+    "equipment": "K-laser Cube 4",
+    "description": "Le laser thérapeutique soulage les douleurs et accompagne le rétablissement de manière précise et non invasive.",
+    "href": "/physio#anchor-laser"
+  },
+  {
+    "imageSrc": "/images/placeholder.png",
+    "imageAlt": "",
+    "category": "Soins à domicile",
+    "name": "Appareil d'électro-stimulation",
+    "species": ["Chat", "Chien", "Cheval", "NAC"],
+    "equipment": "Stim Vet 100",
+    "description": "Cet appareil très intuitif peut être proposé à la location pour permettre la continuité des soins chez vous.",
+    "href": "/physio#anchor-electro"
+  },
+  {
+    "imageSrc": "/images/imoove.jpg",
+    "imageAlt": "Soin par Imoove Vet",
+    "category": "Mobilité",
+    "name": "Imoove Vet",
+    "species": ["Chat", "Chien", "NAC"],
+    "equipment": "Imoove Vet",
+    "description": "La plateforme de proprioception améliore la vitalité, l'équilibre, la mobilité et l'agilité de votre animal.",
+    "href": "/physio#anchor-proprio"
+  },
+  {
+    "imageSrc": "/images/proprio.jpg",
+    "imageAlt": "Chien sur un ballon de rééducation",
+    "category": "Rééducation fonctionnelle",
+    "name": "Couloir de rééducation",
+    "species": ["Chat", "Chien", "NAC"],
+    "equipment": "Ballon de physiothérapie, cavalettis et plots",
+    "description": "Permet de travailler la proprioception, le mouvement et l'équilibre selon les besoins spécifiques de chaque animal.",
+    "href": "/physio#anchor-proprio"
+  }
+]

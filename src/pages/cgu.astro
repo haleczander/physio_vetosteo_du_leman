@@ -1,6 +1,7 @@
 ﻿---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TariffGrid from "../components/TariffGrid.astro";
+import openingHours from "../data/opening-hours.json";
 ---
 
 <BaseLayout
@@ -13,6 +14,10 @@ import TariffGrid from "../components/TariffGrid.astro";
   pageTitle="Conditions générales de fonctionnement"
   includeTariffStyles={true}
 >
+  <header class="page-hero">
+    <h1>Conditions g&eacute;n&eacute;rales de fonctionnement</h1>
+  </header>
+
   <main class="section-legal">
     <section>
       <h2>Généralités</h2>
@@ -31,7 +36,15 @@ import TariffGrid from "../components/TariffGrid.astro";
 
       <h3>Horaires de fonctionnement</h3>
       <div class="horaires">
-        <p>Les horaires habituels d'ouverture sont du <b>lundi au vendredi de 8h30 à 18h</b> ainsi que le <b>samedi de 8h30 à 12H</b></p>
+        <p>Les horaires habituels d'ouverture sont :</p>
+          <table>
+          {openingHours.map((entry) => (
+            <tr>
+              <td>{entry.day}</td>
+              <td>{entry.hours}</td>
+            </tr>
+          ))}
+        </table>
         <p>Uniquement sur rendez-vous, avec un premier contact par mail ou par téléphone.</p>
       </div>
 
