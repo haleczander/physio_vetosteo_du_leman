@@ -18,7 +18,10 @@ const currentNavLink = internalHeaderLinks.find((link) => {
 
 <div id="nav" class={navClass}>
   <input type="checkbox" id="nav-cb" />
-  <label for="nav-cb" class="hamburger shadow-light"><span class="hamburger-line"></span></label>
+  <label for="nav-cb" class="hamburger shadow-light">
+    <span class="visually-hidden">Ouvrir le menu de navigation</span>
+    <span class="hamburger-line"></span>
+  </label>
 
   <a href="/" title="Physio Vet&apos;Ost&eacute;o du L&eacute;man" class="logo shadow-light">
     <img src="/images/logo.svg" alt="Physio Vet&apos;Ost&eacute;o du L&eacute;man - Logo" />

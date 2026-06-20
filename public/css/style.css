@@ -107,6 +107,7 @@ h3 ~*{
     padding:5px;
     max-height: 400px;
     max-width: 80%;
+    height: auto;
 }
 .tp_texte{
     text-align: left;
@@ -192,10 +193,19 @@ footer ul,
 }
 
 /* TABLES ------------------- */
+table {
+    border-collapse: collapse;
+}
 table td+td{
     text-align: end;
     min-width: 5em;
     padding-left: 2em;
+}
+.horaires table tr:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.horaires table tr td{
+    padding: 0.75rem 0.5rem;
 }
 
 /*---------------------------------- */
@@ -450,6 +460,11 @@ section:nth-of-type(n+2)::before{
 .contact section > *:nth-child(2){
     padding:0;
 }
+.coordonnees a{
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+}
 .reversed{
     unicode-bidi:bidi-override;
     direction: rtl;
@@ -479,6 +494,36 @@ section:nth-of-type(n+2)::before{
 /* MEDIA QUERIES ------------------- */
 /*---------------------------------- */
 @media (max-width:1024px){
+    section{
+        width: 100%;
+    }
+    .contact .coordonnees li,
+    #mentions-legales li,
+    #mentions-legales td,
+    #mentions-legales p,
+    #mentions-legales a{
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    #mentions-legales table td+td{
+        min-width: 0;
+        padding-left: 1rem;
+    }
+    .tp_photo,
+    .tp_photo picture{
+        display: block;
+        width: 100%;
+    }
+    .texte-photo img{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        max-height: none;
+        height: auto;
+        margin: 0 auto;
+        object-fit: contain;
+    }
     li+li{
         margin-top:.5em;
     }

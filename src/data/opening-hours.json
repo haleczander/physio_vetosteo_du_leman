@@ -1,27 +1,27 @@
 [
   {
     "day": "Lundi",
-    "hours": "8h30-18h00"
+    "hours": "8h45-20h00"
   },
   {
     "day": "Mardi",
-    "hours": "8h30-18h00"
+    "hours": "8h00-11h00, 14h00-16h00"
   },
   {
     "day": "Mercredi",
-    "hours": "8h30-18h00"
+    "hours": "8h00-13h30"
   },
   {
     "day": "Jeudi",
-    "hours": "8h30-18h00"
+    "hours": "8h00-11h00, 14h00-16h00"
   },
   {
     "day": "Vendredi",
-    "hours": "8h30-18h00"
+    "hours": "8h00-16h00"
   },
   {
     "day": "Samedi",
-    "hours": "8h30-12h00"
+    "hours": "7h00-12h00"
   },
   {
     "day": "Dimanche",
