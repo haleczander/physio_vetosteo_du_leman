@@ -10,8 +10,6 @@ interface Props {
   ogDescription: string;
   ogUrl: string;
   pageTitle: string;
-  heroSubtitle?: string;
-  isHome?: boolean;
   includeTariffStyles?: boolean;
 }
 
@@ -23,8 +21,6 @@ const {
   ogDescription,
   ogUrl,
   pageTitle,
-  heroSubtitle,
-  isHome = false,
   includeTariffStyles = false,
 } = Astro.props;
 ---
@@ -46,8 +42,6 @@ const {
     <meta property="og:description" content={ogDescription} />
     <meta property="og:url" content={ogUrl} />
 
-    {isHome && <meta name="google-site-verification" content="BdbWjK2Pr7frF_aAnnWBYIHugC9yA9MC7XoOYVyzEiw" />}
-
     <link rel="stylesheet" href="/css/style.css?v=19" />
     <link rel="stylesheet" href="/css/navigation.css?v=4" />
     <link rel="stylesheet" href="/css/footer.css?v3" />
@@ -67,7 +61,7 @@ const {
   </head>
 
   <body id={bodyId}>
-    <Header title={pageTitle} heroSubtitle={heroSubtitle} isHome={isHome} />
+    <Header title={pageTitle} />
     <slot />
     <Footer />
     <slot name="scripts" />

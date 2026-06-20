@@ -1,33 +1,32 @@
+---
+import navigation from "../data/navigation.json";
+
+const footerSections = navigation.footer;
+---
+
 <footer>
   <ul>
-    <li>
-      <h2>Notre site</h2>
-      <ul>
-        <li><a href="/#accueil" title="Accueil">Accueil</a></li>
-        <li><a href="/physio" title="Physiothérapie">Physiothérapie</a></li>
-        <li><a href="/tarifs" title="Tarifs">Tarifs</a></li>
-        <li><a href="/contact" title="Contact">Contact</a></li>
-        <li><a href="https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567" title="Rendezvous">Rendez-Vous</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <h2>Suivez-nous !</h2>
-      <ul>
-        <li><a target="_blank" rel="noreferrer" href="https://www.facebook.com/Physio-V%C3%A9to-du-L%C3%A9man-103630238709709/" title="Facebook">Facebook</a></li>
-        <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com/physiovetosteoduleman/" title="Instagram">Instagram</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <h2>Informations légales</h2>
-      <ul>
-        <li><a href="/mentions-legales" title="Mentions légales">Mentions légales</a></li>
-        <li><a href="/cgu" title="Conditions générales">Conditions générales</a></li>
-      </ul>
-    </li>
+    {footerSections.map((section) => (
+      <li>
+        <h2>{section.title}</h2>
+        <ul>
+          {section.links.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                title={link.title}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noreferrer" : undefined}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </li>
+    ))}
   </ul>
 
-  <img class="logo shadow-light" src="/images/logo.svg" alt="Physio Vet’Ostéo du Léman - Logo" />
-  <p class="rights">Physio Vet’Ostéo du Léman - 2025 - Tous droits réservés</p>
+  <img class="logo shadow-light" src="/images/logo.svg" alt="Physio Vet&apos;Ost&eacute;o du L&eacute;man - Logo" />
+  <p class="rights">Physio Vet&apos;Ost&eacute;o du L&eacute;man - 2025 - Tous droits r&eacute;serv&eacute;s</p>
 </footer>

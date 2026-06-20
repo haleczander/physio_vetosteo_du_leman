@@ -1,0 +1,112 @@
+{
+  "header": [
+    [
+      {
+        "label": "Accueil",
+        "href": "/",
+        "title": "Accueil"
+      },
+      {
+        "label": "Physioth\u00e9rapie",
+        "href": "/physio",
+        "title": "Physioth\u00e9rapie"
+      }
+    ],
+    [
+      {
+        "label": "Tarifs",
+        "href": "/tarifs",
+        "title": "Tarifs"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact",
+        "title": "Contact"
+      },
+      {
+        "label": "Rendez-Vous",
+        "href": "https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567",
+        "title": "Rendezvous",
+        "external": true
+      }
+    ]
+  ],
+  "footer": [
+    {
+      "title": "Notre site",
+      "links": [
+        {
+          "label": "Accueil",
+          "href": "/#accueil",
+          "title": "Accueil"
+        },
+        {
+          "label": "Physioth\u00e9rapie",
+          "href": "/physio",
+          "title": "Physioth\u00e9rapie"
+        },
+        {
+          "label": "Tarifs",
+          "href": "/tarifs",
+          "title": "Tarifs"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact",
+          "title": "Contact"
+        },
+        {
+          "label": "Rendez-Vous",
+          "href": "https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567",
+          "title": "Rendezvous",
+          "external": true
+        }
+      ]
+    },
+    {
+      "title": "Suivez-nous !",
+      "links": [
+        {
+          "label": "Facebook",
+          "href": "https://www.facebook.com/Physio-V%C3%A9to-du-L%C3%A9man-103630238709709/",
+          "title": "Facebook",
+          "external": true
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/physiovetosteoduleman/",
+          "title": "Instagram",
+          "external": true
+        }
+      ]
+    },
+    {
+      "title": "Informations l\u00e9gales",
+      "links": [
+        {
+          "label": "Mentions l\u00e9gales",
+          "href": "/mentions-legales",
+          "title": "Mentions l\u00e9gales"
+        },
+        {
+          "label": "Conditions g\u00e9n\u00e9rales",
+          "href": "/cgu",
+          "title": "Conditions g\u00e9n\u00e9rales"
+        }
+      ]
+    }
+  ],
+  "heroActions": [
+    {
+      "label": "Contact",
+      "href": "/contact",
+      "title": "Vers les informations de contact"
+    },
+    {
+      "label": "Rendez-vous",
+      "href": "https://www.planningveto.com/rendez-vous-physio-vet-osteo-du-leman-248567",
+      "title": "Vers la plateforme de rendez-vous",
+      "external": true
+    }
+  ]
+}

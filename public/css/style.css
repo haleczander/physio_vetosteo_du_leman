@@ -66,6 +66,10 @@ body{
     /* background: linear-gradient(-15deg,var(--clr-bleu-m) 20vh,var(--clr-bleu-xc) ,var(--clr-bleu-m)); */
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar{
     width:0;
 }
@@ -147,7 +151,7 @@ h2{
     font-weight: bold;
 }
 .shadow-dark,
-header h1{
+.page-hero h1{
     filter:drop-shadow(0 0 2px var(--clr-bleu-marine));
 }
 .shadow-light{
@@ -172,7 +176,7 @@ details[open] summary{
 }
 
 footer ul,
-header ul{
+.page-hero ul{
     list-style-type: none;
     padding: 0; margin:0;
 }
@@ -196,16 +200,12 @@ table td+td{
 
 /*---------------------------------- */
 /* HEADER -------------------------- */
-header{
+.page-hero{
     position:relative;
     padding-top:calc(1.5*var(--hauteur-header));
     
     height: 50vh; 
     text-align: center;
-
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
 
     background-color: var(--clr-teal-c);
 
@@ -213,68 +213,121 @@ header{
     background-attachment: scroll;
     background-size: cover;
 }
-header >*{
-    margin: auto;
+.page-hero:not(.page-hero_home){
+    display: grid;
+    place-items: center;
+}
+.page-hero >*{
+    margin: 0;
     hyphens: manual;
     color:var(--clr-bleu-xxc);
 }
-header h1{
+.page-hero_home{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.page-hero_home >*{
+    margin: auto;
+}
+.page-hero_home > div{
+    display: flex;
+    flex-direction: column;
+    width: min(90%, 56rem);
+    padding: 2.5rem 0 6.25rem;
+}
+.page-hero h1{
     font-family: 'Titillium Web', sans-serif;
     line-height: 1em;
-    font-size: 3em;
+    font-size: clamp(2.6rem, 10vw, 4rem);
+    text-wrap: balance;
 }
-header p{
-    font-size: 1.75em;
+.page-hero p{
+    max-width: 28rem;
+    font-size: clamp(1.05rem, 4.8vw, 1.75rem);
+    margin-inline: auto;
 }
 
 
 /* ACCUEIL ----------------------- */
-#accueil header{
+#accueil .page-hero{
     min-height: 100vh;
     height: fit-content;
 }
 .hero-actions{
     display: flex;
-    justify-content: space-around;
-    margin: auto;
-
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem auto 0;
+    width: 100%;
 }
 /* Bouton ------------ */
 .hero-cta{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 1.25em;
-    padding: .25em;
+    font-size: clamp(1rem, 3.8vw, 1.25rem);
+    min-width: 10.5rem;
+    padding: .6rem 1rem;
     background: rgba(255,255,255,.25);
     border:1px solid var(--clr-bleu-xc);
     height: fit-content;
-    margin: 0 clamp(5px, 1vw, 10px);
+    margin: 0;
 }
 .hero-cta:hover{
     filter: brightness(140%) drop-shadow(0 0 10px var(--clr-bleu-f));
 }
 /* Défilement --- */    
 .hover-defilement{
-    display: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    color: var(--clr-bleu-xxc);
+    border: 1px solid rgba(245,249,255,.5);
+    background-color: rgba(0, 27, 70, .54);
+    backdrop-filter: blur(4px);
+    transition: transform .25s ease, background-color .25s ease, box-shadow .25s ease;
+    animation: scroll-cue 1.8s ease-in-out infinite;
+    width: 2.5em;
+    height: 2.5em;
+    margin: auto;
+}
+.hover-defilement i{
+    color: currentColor;
+    font-size: 1.5rem;
+    transform:none;
+}
+.hover-defilement:hover{
+    transform: translateX(-50%);
+    background: rgba(0, 27, 70, .84);
 }
 
 /* BANNIERES --------------------- */
-#accueil header{
+#accueil .page-hero{
     background-image:  url(../images/banner-min.jpg);
     background-position: top center;
 }
-#physio header{
+#physio .page-hero{
     background-image:  url(../images/xenaphysio-min.jpg);
     background-position: center ;
 }
-#contact header{
+#contact .page-hero{
     background-image:  url(../images/vitrine-min.jpg);
     background-position: center;
 }
-#tarifs header,
-#cgu header,
-#mentions-legales header{
+#tarifs .page-hero,
+#cgu .page-hero,
+#mentions-legales .page-hero{
     background-image:  url(../images/tarifs-min.jpg);
     background-position: bottom;
 }
@@ -429,6 +482,18 @@ section:nth-of-type(n+2)::before{
     li+li{
         margin-top:.5em;
     }
+    .page-hero_home > div{
+        width: min(92%, 26rem);
+        gap: .85rem;
+        padding-top: 2rem;
+        padding-bottom: 5.5rem;
+    }
+    .page-hero p{
+        max-width: 22rem;
+    }
+    .hero-actions{
+        gap: .75rem;
+    }
     .hero-actions li+li{
         margin-top: 0;
     }
@@ -493,65 +558,48 @@ section:nth-of-type(n+2)::before{
 
 /*---------------------------------- */
 /* HEADER -------------------------- */
-    header{
-        padding-top:calc(2.5*var(--hauteur-header));
+    .page-hero{
         background-attachment: fixed;
     }
-    #accueil header{
+    .page-hero:not(.page-hero_home){
+        display: grid;
+        place-items: center;
+    }
+    #accueil .page-hero{
         background-image:  url(../images/banner-med.jpg);
     }
-    #physio header{
+    #physio .page-hero{
         background-image: url(../images/xenaphysio-med.jpg);
         position: bottom;
     }
-    #tarifs header, 
-    #cgu header, 
-    #mentions-legales header{
+    #tarifs .page-hero, 
+    #cgu .page-hero, 
+    #mentions-legales .page-hero{
         background-image:  url(../images/tarifs-med.jpg);
     }
-    #contact header{
+    #contact .page-hero{
         background-image:  url(../images/vitrine-med.jpg);
     }
-    header h1{
+    .page-hero h1{
         font-size: 4em;
     }
 
-/* Défilement vers le bas ------- */
-    .hover-defilement{
-        display:block;
-        position:absolute;
-        bottom: 0;left:0;
-        min-width: 100%;
-        max-height: 5em;
-        filter: opacity(.55);
-        transition: all .5s ease-in-out;
-    }
-    .hover-defilement i{
-        color: var(--clr-bleu-marine);
-        font-size: 5em;
-        transform:scaleX(2);
-    }
-    .hover-defilement:hover{
-        filter: opacity(.85);
-    }
-    .hover-defilement:hover::after{
-        content:'';
-        position: absolute;
-        bottom: 0;left:0;
-        width: 100%;height: 5em;
-        background: var(--clr-bleu-xxc);
-        filter: opacity(.55) blur(2px);
-        z-index: -1;
-        transition: all .5s ease-in-out;
-    }
+}
 
+@keyframes scroll-cue{
+    0%, 100%{
+        transform: translateX(-50%) translateY(0);
+    }
+    50%{
+        transform: translateX(-50%) translateY(6px);
+    }
 }
 
 @media (min-width:1280px){
     .equipements-grid{
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    #accueil header{
+    #accueil .page-hero{
         background-image:  url(../images/banner-big.jpg);
     }
 }
