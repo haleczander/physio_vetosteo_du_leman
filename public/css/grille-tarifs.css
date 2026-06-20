@@ -23,12 +23,30 @@
 
 .tarifs-specialite td{
     padding: 0.5rem 1rem ;
+    white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
+    hyphens: auto;
     vertical-align: top;
 }
 
-.tarifs-specialite td:last-child{
+.tarifs-specialite th{
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.tarifs-specialite td p{
+    margin: 0;
+}
+
+.tarifs-specialite td+td{
+    min-width: 0;
+    padding-left: 1rem;
+}
+
+.tarifs-specialite td:last-child:not([colspan]){
     width: 6.5rem;
     white-space: nowrap;
     text-align: right;
