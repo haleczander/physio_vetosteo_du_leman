@@ -4,11 +4,7 @@
     "imageAlt": "Tapis Hydro Physio",
     "category": "Hydrothérapie",
     "name": "Tapis d'hydrothérapie",
-    "species": [
-      { "label": "Chat", "iconClass": "fas fa-cat" },
-      { "label": "Chien", "iconClass": "fas fa-dog" },
-      { "label": "NAC" }
-    ],
+    "species": ["Chat", "Chien", "NAC"],
     "equipment": "Hydro Physio (version longue)",
     "description": "La taille du tapis de marche immergé permet aux chiens de grande taille de profiter également des bienfaits de l'eau.",
     "href": "/physio#anchor-hydro"
@@ -18,12 +14,7 @@
     "imageAlt": "Photo d'un chat soigné par photobiomodulation",
     "category": "Gestion de la douleur",
     "name": "Laser thérapeutique",
-    "species": [
-      { "label": "Chat", "iconClass": "fas fa-cat" },
-      { "label": "Chien", "iconClass": "fas fa-dog" },
-      { "label": "Cheval", "iconClass": "fas fa-horse" },
-      { "label": "NAC" }
-    ],
+    "species": ["Chat", "Chien", "Cheval", "NAC"],
     "equipment": "K-laser Cube 4",
     "description": "Le laser thérapeutique soulage les douleurs et accompagne le rétablissement de manière précise et non invasive.",
     "href": "/physio#anchor-laser"
@@ -33,12 +24,7 @@
     "imageAlt": "Photographie à venir.",
     "category": "Soins à domicile",
     "name": "Appareil d'électro-stimulation",
-    "species": [
-      { "label": "Chat", "iconClass": "fas fa-cat" },
-      { "label": "Chien", "iconClass": "fas fa-dog" },
-      { "label": "Cheval", "iconClass": "fas fa-horse" },
-      { "label": "NAC" }
-    ],
+    "species": ["Chat", "Chien", "Cheval", "NAC"],
     "equipment": "Stim Vet 100",
     "description": "Cet appareil très intuitif peut être proposé à la location pour permettre la continuité des soins chez vous.",
     "href": "/physio#anchor-electro"
@@ -48,11 +34,7 @@
     "imageAlt": "Photo d'un soin par Imoove Vet",
     "category": "Mobilité",
     "name": "Imoove Vet",
-    "species": [
-      { "label": "Chat", "iconClass": "fas fa-cat" },
-      { "label": "Chien", "iconClass": "fas fa-dog" },
-      { "label": "NAC" }
-    ],
+    "species": ["Chat", "Chien", "NAC"],
     "equipment": "Imoove Vet",
     "description": "La plateforme de proprioception améliore la vitalité, l'équilibre, la mobilité et l'agilité de votre animal.",
     "href": "/physio#anchor-proprio"
@@ -62,11 +44,7 @@
     "imageAlt": "Chien sur un ballon de rééducation",
     "category": "Rééducation fonctionnelle",
     "name": "Couloir de rééducation",
-    "species": [
-      { "label": "Chat", "iconClass": "fas fa-cat" },
-      { "label": "Chien", "iconClass": "fas fa-dog" },
-      { "label": "NAC" }
-    ],
+    "species": ["Chat", "Chien", "NAC"],
     "equipment": "Ballon de physiothérapie, cavalettis et plots",
     "description": "Permet de travailler la proprioception, le mouvement et l'équilibre selon les besoins spécifiques de chaque animal.",
     "href": "/physio#anchor-proprio"

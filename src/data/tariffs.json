@@ -1,0 +1,90 @@
+{
+  "effectiveDate": "01/04/2025",
+  "vatRate": 20,
+  "sections": [
+    {
+      "title": "Actes",
+      "rows": [
+        {
+          "type": "priced",
+          "label": "Consultation initiale de Physiothérapie",
+          "meta": "environ 1h",
+          "details": [
+            "Reprise de commémoratifs, examens clinique, orthopédique et neurologique",
+            "Mise en place d'un protocole de soins au cabinet, ainsi qu’au domicile des propriétaires"
+          ],
+          "price": "85 €"
+        },
+        {
+          "type": "priced",
+          "label": "Bilan pour chien sportif",
+          "price": "99 €"
+        },
+        {
+          "type": "priced",
+          "label": "Ostéopahie",
+          "price": "79 €"
+        }
+      ]
+    },
+    {
+      "title": "Physiothérapie",
+      "rows": [
+        {
+          "type": "note",
+          "text": "Une séance de physiothérapie peut associer plusieurs soins définis selon le protocole établi lors de la consultation initiale tels que laser thérapeutique, la plateforme de proprioception, l'hydrothérapie, la massothérapie ou encore des exercices de rééducation."
+        },
+        {
+          "type": "priced",
+          "label": "Séance à l'unité",
+          "price": "72 €"
+        },
+        {
+          "type": "priced",
+          "label": "Forfait de 5 séances",
+          "price": "335 €"
+        }
+      ]
+    },
+    {
+      "title": "Laser thérapeutique",
+      "rows": [
+        {
+          "type": "priced",
+          "label": "1 Séance (1 zone)",
+          "price": "38 €"
+        },
+        {
+          "type": "priced",
+          "label": "Forfait 5 Séances (1 zone)",
+          "price": "177 €"
+        },
+        {
+          "type": "priced",
+          "label": "1 Séance (plusieurs zones)",
+          "price": "50 €"
+        },
+        {
+          "type": "priced",
+          "label": "Forfait 5 Séances (plusieurs zones)",
+          "price": "237 €"
+        }
+      ]
+    },
+    {
+      "title": "Plateforme de proprioception Imoove Vet",
+      "rows": [
+        {
+          "type": "priced",
+          "label": "1 Séance",
+          "price": "45 €"
+        },
+        {
+          "type": "priced",
+          "label": "Forfait 5 Séances",
+          "price": "210 €"
+        }
+      ]
+    }
+  ]
+}

@@ -7,12 +7,12 @@
     <url>
         <loc>https://physiovetoduleman.com/contact</loc>
         <lastmod>2025-05-08T16:00:00+00:00</lastmod>
-        <priority>0.80</priority>
+        <priority>0.90</priority>
     </url>
     <url>
         <loc>https://physiovetoduleman.com/physio</loc>
         <lastmod>2025-05-08T16:00:00+00:00</lastmod>
-        <priority>0.90</priority>
+        <priority>0.70</priority>
     </url>
     <url>
         <loc>https://physiovetoduleman.com/tarifs</loc>
@@ -22,11 +22,11 @@
     <url>
         <loc>https://physiovetoduleman.com/cgu</loc>
         <lastmod>2025-05-08T16:00:00+00:00</lastmod>
-        <priority>0.80</priority>
+        <priority>0.10</priority>
     </url>
     <url>
         <loc>https://physiovetoduleman.com/mentions-legales</loc>
         <lastmod>2025-05-08T16:00:00+00:00</lastmod>
-        <priority>0.80</priority>
+        <priority>0.10</priority>
     </url>
 </urlset>

@@ -330,7 +330,9 @@ section:nth-of-type(n+2)::before{
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
+    padding: 1rem;
 }
 .equipement-body{
     display: flex;
@@ -353,7 +355,14 @@ section:nth-of-type(n+2)::before{
 }
 .equipement-meta{
     margin: 0;
+    padding-left: 0;
+    text-indent: 0;
     color: var(--clr-bleu-f);
+}
+.equipement-description{
+    margin: 0;
+    padding-left: 0;
+    text-indent: 0;
 }
 .equipement-species{
     display: flex;
@@ -361,13 +370,19 @@ section:nth-of-type(n+2)::before{
     gap: .25rem .5rem;
     align-items: center;
     margin: 0;
+    padding-left: 0;
+    text-indent: 0;
     color: var(--clr-bleu-marine);
 }
 .equipement-species .icon{
-    margin: 0;
+    margin: 0 .5rem 0 0;
 }
 .equipement-body a{
     margin-top: auto;
+    margin-left: 0;
+    padding-left: 0;
+    text-indent: 0;
+    align-self: flex-start;
     font-weight: bold;
     color: var(--clr-bleu-f);
 }
