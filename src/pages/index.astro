@@ -1,7 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EquipmentCard from "../components/EquipmentCard.astro";
 import equipments from "../data/equipments.json";
+import entreeMedImage from "../assets/images/entree-med.jpg";
+import charlotteImage from "../assets/images/charlotte.jpeg";
 ---
 
 <BaseLayout
@@ -35,7 +38,12 @@ import equipments from "../data/equipments.json";
       <h2>Bienvenue sur notre site internet</h2>
       <div class="texte-photo">
         <div class="tp_photo">
-          <img src="/images/entree-med.jpg" alt="Entr&eacute;e du cabinet" />
+          <Image
+            src={entreeMedImage}
+            alt="Entr&eacute;e du cabinet"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 40vw"
+          />
         </div>
 
         <div class="tp_texte">
@@ -57,7 +65,12 @@ import equipments from "../data/equipments.json";
       <h2>Dr. Charlotte Coevoet</h2>
       <div class="texte-photo">
         <div class="tp_photo">
-          <img src="/images/charlotte.jpeg" alt="Photo du Docteur Charlotte Coevoet" />
+          <Image
+            src={charlotteImage}
+            alt="Docteur Charlotte Coevoet"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 40vw"
+          />
         </div>
 
         <div class="tp_texte">

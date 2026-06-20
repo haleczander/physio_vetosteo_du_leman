@@ -11,7 +11,7 @@
   },
   {
     "imageSrc": "/images/laser.jpg",
-    "imageAlt": "Photo d'un chat soigné par photobiomodulation",
+    "imageAlt": "Chat soigné par photobiomodulation",
     "category": "Gestion de la douleur",
     "name": "Laser thérapeutique",
     "species": ["Chat", "Chien", "Cheval", "NAC"],
@@ -21,7 +21,7 @@
   },
   {
     "imageSrc": "/images/placeholder.png",
-    "imageAlt": "Photographie à venir.",
+    "imageAlt": "",
     "category": "Soins à domicile",
     "name": "Appareil d'électro-stimulation",
     "species": ["Chat", "Chien", "Cheval", "NAC"],
@@ -31,7 +31,7 @@
   },
   {
     "imageSrc": "/images/imoove.jpg",
-    "imageAlt": "Photo d'un soin par Imoove Vet",
+    "imageAlt": "Soin par Imoove Vet",
     "category": "Mobilité",
     "name": "Imoove Vet",
     "species": ["Chat", "Chien", "NAC"],

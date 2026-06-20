@@ -1,4 +1,11 @@
 ---
+import { Image } from "astro:assets";
+import tapisHydroImage from "../assets/images/tapis-hydro.jpg";
+import laserImage from "../assets/images/laser.jpg";
+import placeholderImage from "../assets/images/placeholder.png";
+import imooveImage from "../assets/images/imoove.jpg";
+import proprioImage from "../assets/images/proprio.jpg";
+
 interface Props {
   imageSrc: string;
   imageAlt: string;
@@ -12,6 +19,20 @@ interface Props {
 
 const { imageSrc, imageAlt, category, name, species, equipment, description, href } = Astro.props;
 
+const imageMap = {
+  "/images/tapis-hydro.jpg": tapisHydroImage,
+  "/images/laser.jpg": laserImage,
+  "/images/placeholder.png": placeholderImage,
+  "/images/imoove.jpg": imooveImage,
+  "/images/proprio.jpg": proprioImage,
+} as const;
+
+const resolvedImage = imageMap[imageSrc as keyof typeof imageMap];
+
+if (!resolvedImage) {
+  throw new Error(`Unsupported equipment image: ${imageSrc}`);
+}
+
 const speciesIconMap: Record<string, string | undefined> = {
   Chat: "fas fa-cat",
   Chien: "fas fa-dog",
@@ -22,7 +43,12 @@ const speciesIconMap: Record<string, string | undefined> = {
 
 <article class="equipement-card shadow-light">
   <div class="equipement-media">
-    <img src={imageSrc} alt={imageAlt} />
+    <Image
+      src={resolvedImage}
+      alt={imageAlt}
+      loading="lazy"
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    />
   </div>
   <div class="equipement-body">
     <p class="equipement-kicker">{category}</p>

@@ -127,7 +127,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h2 id="faq3" class="anchor">Comment se passe la prise en charge?</h2>
       <div class="texte-photo">
         <div class="tp_photo">
-          <img src="/images/bureau.jpg" alt="Photographie du bureau du Dr Charlotte Coevoet" />
+          <img src="/images/bureau.jpg" alt="Bureau du Dr Charlotte Coevoet" loading="lazy" />
         </div>
         <div class="tp_texte">
           <p>La physiothérapie vétérinaire est une discipline réglementée, soumise aux règles établies par l'Ordre des Vétérinaires.</p>
@@ -150,7 +150,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <summary><i class="fas fa-water icon"></i>Hydrothérapie (<i>soin par l'eau</i>)</summary>
             <div class="texte-photo">
               <div class="tp_texte">
-                <h4>Principe et Bienfaits</h4>
+                <h4 aria-label="Principe et bienfaits">Principe et Bienfaits</h4>
                 <ol>
                   <li>
                     <p>Lorsqu'un animal est immergé jusqu'au niveau de ses hanches, la poussée d'Archimède permet de diviser son poids par 3.</p>
@@ -160,14 +160,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                   <li>La résistance de l'eau permet à l'animal de développer beaucoup plus amplement ses mouvements et d'effectuer un effort musculaire plus important que dans l'air, ce qui permet de maintenir et aussi d'améliorer la musculature et l'amplitude articulaire.</li>
                 </ol>
 
-                <h4>Espèces Concernées</h4>
+                <h4 aria-label="Espèces concernées">Espèces Concernées</h4>
                 <span class="liste-especes">
                   <i class="fas fa-cat icon"><span>Chat</span></i>
                   <i class="fas fa-dog icon"><span>Chien</span></i>
                   <span class="icon">NAC</span>
                 </span>
 
-                <h4>Indications</h4>
+                <h4 aria-label="Indications">Indications</h4>
                 <ul>
                   <li>Troubles:
                     <ul>
@@ -180,7 +180,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </ul>
               </div>
               <div class="tp_photo">
-                <img src="/images/tapis-hydro.jpg" alt="Tapis d'hydrothérapie Hydro Physio" />
+                <img src="/images/tapis-hydro.jpg" alt="Tapis d'hydrothérapie Hydro Physio" loading="lazy" />
               </div>
             </div>
           </details>
@@ -190,9 +190,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <summary><i class="fas fa-sun icon"></i>Photobiomodulation (<i>laser thérapeutique</i>)</summary>
             <div class="texte-photo">
               <div class="tp_texte">
-                <h4>Principe et Bienfaits</h4>
+                <h4 aria-label="Principe et bienfaits">Principe et Bienfaits</h4>
                 <p>La laser amplifie la lumière et produit un faisceau de photons parallèles.<br />L'utilisation thérapeutique de ce faisceau permet une stimulation cellulaire qui a principalement des effets antalgiques, anti-inflammatoires, anti-œdémateux ou encore cicatrisants.</p>
-                <h4>Espèces Concernées</h4>
+                <h4 aria-label="Espèces concernées">Espèces Concernées</h4>
                 <span class="liste-especes">
                   <i class="fas fa-cat icon"><span>Chat</span></i>
                   <i class="fas fa-dog icon"><span>Chien</span></i>
@@ -200,14 +200,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                   <span class="icon">NAC</span>
                 </span>
 
-                <h4>Indications</h4>
+                <h4 aria-label="Indications">Indications</h4>
                 <ul>
                   <li>Affections du système locomoteur</li>
                   <li>Retard de cicatrisation(osseuse ou cutanée par exemple)</li>
                 </ul>
               </div>
               <div class="tp_photo">
-                <img src="/images/laser.jpg" alt="Soin par photobiomodulation d'un chat." />
+                <img src="/images/laser.jpg" alt="Soin par photobiomodulation d'un chat." loading="lazy" />
               </div>
             </div>
           </details>
@@ -217,7 +217,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <summary><i class="fas fa-bolt icon"></i> Électrostimulation (<i>stimulation par l'électricité</i>)</summary>
             <div class="texte-photo">
               <div class="tp_texte">
-                <h4>Principe et Bienfaits</h4>
+                <h4 aria-label="Principe et bienfaits">Principe et Bienfaits</h4>
                 <p>Les fibres nerveuses utilisent naturellement l'électricité afin de communiquer des informations sensorielles ou neuro-musculaires entre le corps et le cerveau.</p>
                 <p>La stimulation contrôlée de ces fibres a des effets bénéfiques différents en fonction du type de fibre :</p>
                 <ul>
@@ -226,7 +226,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </ul>
                 <p>En plus des soins dans le cabinet, un appareil est disponible à la location afin que vous réalisiez les soins à domicile.</p>
 
-                <h4>Espèces Concernées</h4>
+                <h4 aria-label="Espèces concernées">Espèces Concernées</h4>
                 <span class="liste-especes">
                   <i class="fas fa-cat icon"><span>Chat</span></i>
                   <i class="fas fa-dog icon"><span>Chien</span></i>
@@ -234,7 +234,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                   <span class="icon">NAC</span>
                 </span>
 
-                <h4>Indications</h4>
+                <h4 aria-label="Indications">Indications</h4>
                 <ul>
                   <li>Après une opération de chirurgie orthopédique ou neurologique,</li>
                   <li>Lutter contre la fonte musculaire,</li>
@@ -243,7 +243,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </ul>
               </div>
               <div class="tp_photo">
-                <img class="placeholder" src="/images/placeholder.png" alt="Photographie à venir." />
+                <img class="placeholder" src="/images/placeholder.png" alt="" loading="lazy" />
               </div>
             </div>
           </details>
@@ -253,16 +253,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <summary><i class="fas fa-balance-scale icon"></i>Proprioception (<i>perception de son propre corps et mouvements</i>)</summary>
             <div class="texte-photo">
               <div class="tp_texte">
-                <h4>Principe et Bienfaits</h4>
+                <h4 aria-label="Principe et bienfaits">Principe et Bienfaits</h4>
                 <p>La proprioception est la perception, consciente ou non, de la position des différentes parties de son corps.</p>
-                <h4>Espèces Concernées</h4>
+                <h4 aria-label="Espèces concernées">Espèces Concernées</h4>
                 <span class="liste-especes">
                   <i class="fas fa-cat icon"><span>Chat</span></i>
                   <i class="fas fa-dog icon"><span>Chien</span></i>
                   <span class="icon">NAC</span>
                 </span>
 
-                <h4>Indications</h4>
+                <h4 aria-label="Indications">Indications</h4>
                 <ul>
                   <li>Gériatrie : gains en mobilité et vitalité</li>
                   <li>Rééducation (faisant suite à une opération ou non)</li>
@@ -271,7 +271,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </ul>
               </div>
               <div class="tp_photo">
-                <img src="/images/imoove2.jpg" alt="Bouledogue français sur la plateforme imoove vet." />
+                <img src="/images/imoove2.jpg" alt="Bouledogue français sur la plateforme imoove vet." loading="lazy" />
               </div>
             </div>
           </details>
@@ -281,16 +281,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <summary><i class="fas fa-diagnoses icon"></i>Kinésithérapie (<i>soin par le mouvement</i>)</summary>
             <div class="texte-photo">
               <div class="tp_texte">
-                <h4>Principe et Bienfaits</h4>
+                <h4 aria-label="Principe et bienfaits">Principe et Bienfaits</h4>
                 <p>La kinésithérapie emploie le mouvement dans le but de renforcer, maintenir ou rétablir les capacités fonctionnelles.</p>
-                <h4>Espèces Concernées</h4>
+                <h4 aria-label="Espèces concernées">Espèces Concernées</h4>
                 <span class="liste-especes">
                   <i class="fas fa-cat icon"><span>Chat</span></i>
                   <i class="fas fa-dog icon"><span>Chien</span></i>
                   <span class="icon">NAC</span>
                 </span>
 
-                <h4>Indications</h4>
+                <h4 aria-label="Indications">Indications</h4>
                 <ul>
                   <li>Renforcement musculaire,</li>
                   <li>Après une opération de chirurgie orthopédique ou neurologique,</li>
@@ -299,7 +299,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </ul>
               </div>
               <div class="tp_photo">
-                <img class="placeholder" src="/images/placeholder.png" alt="Photographie à venir." />
+                <img class="placeholder" src="/images/placeholder.png" alt="" loading="lazy" />
               </div>
             </div>
           </details>
@@ -309,7 +309,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <summary><i class="fas fa-hand-holding-medical icon"></i>Massothérapie (<i>soin par le massage</i>)</summary>
             <div class="texte-photo">
               <div class="tp_texte">
-                <h4>Principe et Bienfaits</h4>
+                <h4 aria-label="Principe et bienfaits">Principe et Bienfaits</h4>
                 <p>Les massages et étirements ont un effet décontracturant et permettent également de soulager des tensions musculaires.</p>
                 <p>La mobilisation passive des articulations permet de:</p>
                 <ul>
@@ -319,7 +319,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </ul>
                 <p>Ces techniques s'effectuent au cabinet, et éventuellement à la maison après une démonstration.</p>
 
-                <h4>Espèces Concernées</h4>
+                <h4 aria-label="Espèces concernées">Espèces Concernées</h4>
                 <span class="liste-especes">
                   <i class="fas fa-cat icon"><span>Chat</span></i>
                   <i class="fas fa-dog icon"><span>Chien</span></i>
@@ -327,7 +327,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                   <span class="icon">NAC</span>
                 </span>
 
-                <h4>Indications</h4>
+                <h4 aria-label="Indications">Indications</h4>
                 <ul>
                   <li>Pathologie neurologique,</li>
                   <li>Après une opération de chirurgie orthopédique ou neurologique,</li>
@@ -336,7 +336,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </ul>
               </div>
               <div class="tp_photo">
-                <img class="placeholder" src="/images/placeholder.png" alt="Photographie à venir." />
+                <img class="placeholder" src="/images/placeholder.png" alt="" loading="lazy" />
               </div>
             </div>
           </details>
