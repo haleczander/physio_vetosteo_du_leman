@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - migration/astro
   workflow_dispatch:
 
 permissions:
@@ -34,6 +33,16 @@ jobs:
 
       - name: Build site
         run: npm run build
+
+      - name: Deploy dist to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ vars.HOSTINGER_FTP_HOST }}
+          port: ${{ vars.HOSTINGER_FTP_PORT }}
+          username: ${{ vars.HOSTINGER_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          local-dir: dist/
+          server-dir: /domains/physiovetoduleman.com/public_html/
 
       - name: Compute archive name
         id: archive
