@@ -1,0 +1,8 @@
+RewriteEngine On
+
+Redirect 301 /pages/accueil.html /
+Redirect 301 /pages/contact.html /contact
+Redirect 301 /pages/physio.html /physio
+Redirect 301 /pages/tarifs.html /tarifs
+Redirect 301 /pages/cgu.html /cgu
+Redirect 301 /pages/mentions-legales.html /mentions-legales
