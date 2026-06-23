@@ -31,6 +31,11 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Copy .htaccess into dist
+        run: |
+          mkdir -p dist
+          cp public/.htaccess dist/.htaccess
+
       - name: Upload dist artifact
         uses: actions/upload-artifact@v7
         with:
